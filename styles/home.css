@@ -1,0 +1,48 @@
+/* header */
+.menu {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0 .8rem 0 .8rem;
+}
+
+.menu_brand img {
+  cursor: pointer;
+  width: 30px;
+}
+
+.menu_list ul {
+  display: flex;
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+  gap: clamp(2rem, 1.4rem + 3vw, 5rem);
+  text-transform: uppercase;
+}
+
+/* hero section */
+.hero_date {
+  display: flex;
+}
+
+.hero_date h2 {
+  align-items: center;
+  display: flex;
+  transform: rotate(270deg);
+  font-size: 5rem;
+  margin-left: -35px;
+  margin-right: -40px;
+  font-family: 'Glock';
+}
+
+.hero_img img {
+  width: 100%;
+  height: 10%;
+}
+
+.hero_title h1 {
+  text-transform: uppercase;
+  margin-top: -12px;
+}
