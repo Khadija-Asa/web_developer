@@ -3,6 +3,7 @@
   --Black: #000;
   --Purple: #AE8CFA;
   --White: #FEFCFF;
+  --Gray: #d1d1d1;
 }
 
 /* Fonts */
@@ -55,7 +56,6 @@ html:focus-within {
 
 html, body {
   overflow-x: hidden;
-  .
 }
 
 /* Set core body defaults */
@@ -63,7 +63,6 @@ body {
   background-color: var(--Black);
   /* background-image: url("data:image/svg+xml,%3Csvg width='30' height='1' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ae8cfa' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); */
   font-family: '';
-  line-height: 1.5;
   text-rendering: optimizeSpeed;
   color: var(--White);
 }
@@ -92,6 +91,6 @@ select {
   }
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */

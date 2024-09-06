@@ -4,10 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   width: 100%;
-  padding: 0 .8rem 0 .8rem;
+  padding: .5rem .8rem 0 .8rem;
 }
 
 .menu_brand img {
@@ -23,26 +21,65 @@
 }
 
 /* hero section */
-.hero_date {
+.hero {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
 
-.hero_date h2 {
-  align-items: center;
+.hero_year h2 {
+  margin-bottom: -3rem;
   display: flex;
-  transform: rotate(270deg);
-  font-size: 5rem;
-  margin-left: -35px;
-  margin-right: -40px;
+  /* transform: rotate(270deg); */
+  align-items: center;
+  font-size: 10rem;
   font-family: 'Glock';
+  flex-direction: column;
+  width: 100vw;
 }
 
 .hero_img img {
-  width: 100%;
-  height: 10%;
+  width: 100vw;
 }
 
 .hero_title h1 {
   text-transform: uppercase;
-  margin-top: -12px;
+  /* margin-top: -12px; */
+}
+/* barcode section */
+.hero_barcode {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  gap: 5rem;
+  justify-content: center;
+}
+
+.barcode_img h3 {
+  margin-bottom: -40px;
+  font-family: 'Glock';
+}
+
+.barcode_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.barcode_img img {
+  transform: rotate(90deg);
+  width: 40px;
+}
+
+.barcode_asterisque img {  
+  width: 90px;
+  animation: spinner 15s linear infinite; 
+}
+
+@keyframes spinner {
+  to { 
+    transform: rotate(360deg);
+  }
 }
