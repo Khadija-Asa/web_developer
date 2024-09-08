@@ -33,7 +33,7 @@
 }
 
 .hero_year h2 {
-  margin: 3rem 0 -4.5rem 0;
+  margin: 3rem 0 -8rem 0;
   display: flex;
   /* transform: rotate(270deg); */
   align-items: center;
@@ -49,6 +49,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  z-index: -1;
 }
 
 .hero_img h1 {
@@ -73,9 +74,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* grid-template-rows: repeat(3, 1fr); */
-  grid-column-gap: 0px;
+  grid-column-gap: 10px;
   grid-row-gap: 0px;
-  margin-top: .5rem;
+  margin-top: .3rem;
 }
   
 .grid_text { 
@@ -88,18 +89,7 @@
 .grid_asterisque {
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
-  place-items: center;
-}
-
-.grid_asterisque img {
-  animation: spinner 50s linear infinite; 
-  width: 80px;
-}
-
-@keyframes spinner {
-  to { 
-    transform: rotate(360deg);
-  }
+  place-items: end;
 }
 
 .grid_img { 
@@ -113,7 +103,7 @@
   height: 60px;
 }
 
-.grid_flags {
+/* .grid_flags {
   display: flex;
   grid-area: 3 / 1 / 4 / 2; 
   align-items: center;
@@ -125,7 +115,7 @@
   display: flex;
   aspect-ratio: 16 / 9;
   filter: grayscale(1);
-}
+} */
 
 .grid_flags img:hover {
   filter: grayscale(0);
@@ -136,11 +126,27 @@
   font-family: 'Milany';
   display: grid;
   justify-items: center;
-  align-items: center;
 }
 
 .grid_name span {
   font-size: .9rem;
+  color: var(--Gray);
+}
+
+.grid_name img {
+  width: 50px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.grid_name img {
+  animation: spinner 50s linear infinite; 
+}
+
+@keyframes spinner {
+  to { 
+    transform: rotate(360deg);
+  }
 }
 
 /* .grid_flags { 
