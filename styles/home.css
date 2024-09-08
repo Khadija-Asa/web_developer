@@ -20,6 +20,10 @@
   text-transform: uppercase;
 }
 
+.menu_list li:hover {
+  color: var(--Purple);
+}
+
 /* hero section */
 .hero {
   display: flex;
@@ -29,57 +33,147 @@
 }
 
 .hero_year h2 {
-  margin-bottom: -3rem;
+  margin: 3rem 0 -4.5rem 0;
   display: flex;
   /* transform: rotate(270deg); */
   align-items: center;
-  font-size: 10rem;
-  font-family: 'Glock';
+  font-size: 15rem;
+  font-family: 'Aceh';
   flex-direction: column;
   width: 100vw;
+  letter-spacing: 15px;
+}
+
+/* hero image */
+.hero_img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero_img h1 {
+  position: absolute;
+  bottom: -15px;
+  z-index: 1;
+  text-transform: uppercase;
+  color: var(--Gray);
+  font-family: 'Milany';
+  font-size: 3rem;
+  /* -webkit-text-stroke: .1px var(--Gray); */
+  letter-spacing: 3px;
 }
 
 .hero_img img {
+  position: relative;
   width: 100vw;
 }
 
-.hero_title h1 {
+/* grid section */
+.hero_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-top: .5rem;
+}
+  
+.grid_text { 
+  grid-area: 1 / 1 / 2 / 2;
+  text-align: justify;
   text-transform: uppercase;
-  /* margin-top: -12px; */
-}
-/* barcode section */
-.hero_barcode {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  gap: 5rem;
-  justify-content: center;
+  font-size: .8rem;
 }
 
-.barcode_img h3 {
-  margin-bottom: -40px;
-  font-family: 'Glock';
+.grid_asterisque {
+  grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  place-items: center;
 }
 
-.barcode_img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.barcode_img img {
-  transform: rotate(90deg);
-  width: 40px;
-}
-
-.barcode_asterisque img {  
-  width: 90px;
-  animation: spinner 15s linear infinite; 
+.grid_asterisque img {
+  animation: spinner 50s linear infinite; 
+  width: 80px;
 }
 
 @keyframes spinner {
   to { 
     transform: rotate(360deg);
   }
+}
+
+.grid_img { 
+  grid-area: 2 / 1 / 3 / 3; 
+  display: grid;
+}
+
+.grid_img img {
+  width: 100%;
+  object-fit: cover;
+  height: 60px;
+}
+
+.grid_flags {
+  display: flex;
+  grid-area: 3 / 1 / 4 / 2; 
+  align-items: center;
+  justify-content: center;
+}
+
+.grid_flags img {
+  width: 50px;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  filter: grayscale(1);
+}
+
+.grid_flags img:hover {
+  filter: grayscale(0);
+}
+
+.grid_name { 
+  text-transform: uppercase;
+  font-family: 'Milany';
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid_name span {
+  font-size: .9rem;
+}
+
+/* .grid_flags { 
+  grid-area: 4 / 1 / 5 / 2; 
+  display: flex;
+}
+
+.grid_flags img {
+  width: 50px;
+} */
+
+/* .grid_job {
+  grid-area: 4 / 2 / 5 / 3; 
+} */
+
+
+
+
+
+/* .hero_barcode {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  gap: 5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.barcode_img h3 {
+  margin-bottom: -40px;
+  font-family: 'Glock';
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }

@@ -7,27 +7,25 @@
 }
 
 /* Fonts */
-
-@font-face {
-  font-family: 'Jiwez';
-  src: url(./../fonts/jiwez/Jiwezpersonaluse.otf);
-}
-
 @font-face {
   font-family: 'Aceh';
   src: url(./../fonts/aceh_darusalam/Aceh\ Darusalam.ttf);
 }
 
+@font-face {
+  font-family: 'Assyrian';
+  src: url(./../fonts/assyrian/Assyrian.ttf);
+}
 
 @font-face {
-  font-family: 'Kahlil';
-  src: url(./../fonts/kahlil/Kahlil.ttf);
+  font-family: 'Glock';
+  src: url(./../fonts/lt_glockenspiel/LT\ Glockenspiel\ Black.ttf);
 }
 
 /* numbers */
 @font-face {
-  font-family: 'Glock';
-  src: url(./../fonts/lt_glockenspiel/LT\ Glockenspiel\ Black.ttf);
+  font-family: 'Milany';
+  src: url(./../fonts/milany/milany-regular.otf);
 }
  
 /* Box sizing rules */
