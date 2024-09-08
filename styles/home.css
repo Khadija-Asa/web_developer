@@ -8,20 +8,32 @@
   padding: .5rem .8rem 0 .8rem;
 }
 
+/* logo */
 .menu_brand img {
   cursor: pointer;
   width: 30px;
 }
 
+/* links */
 .menu_list ul {
   display: flex;
   font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
-  gap: clamp(2rem, 1.4rem + 3vw, 5rem);
+  gap: 5px;
   text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
 }
 
-.menu_list li:hover {
+.menu_list a {
+  color: var(--White);
+  border: 1px solid var(--Gray);
+  padding: .4rem .7rem 0 .7rem;
+  border-radius: 5px;
+}
+
+.menu_list a:hover {
   color: var(--Purple);
+  border: 1px solid var(--Purple);
 }
 
 /* hero section */
@@ -29,18 +41,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
 }
 
 .hero_year h2 {
   margin: 3rem 0 -8rem 0;
   display: flex;
-  /* transform: rotate(270deg); */
   align-items: center;
   font-size: 15rem;
   font-family: 'Aceh';
   flex-direction: column;
-  width: 100vw;
   letter-spacing: 15px;
 }
 
@@ -52,20 +61,7 @@
   z-index: -1;
 }
 
-.hero_img h1 {
-  position: absolute;
-  bottom: -15px;
-  z-index: 1;
-  text-transform: uppercase;
-  color: var(--Gray);
-  font-family: 'Milany';
-  font-size: 3rem;
-  /* -webkit-text-stroke: .1px var(--Gray); */
-  letter-spacing: 3px;
-}
-
 .hero_img img {
-  position: relative;
   width: 100vw;
 }
 
@@ -73,7 +69,6 @@
 .hero_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: repeat(3, 1fr); */
   grid-column-gap: 10px;
   grid-row-gap: 0px;
   margin-top: .3rem;
@@ -102,20 +97,6 @@
   object-fit: cover;
   height: 60px;
 }
-
-/* .grid_flags {
-  display: flex;
-  grid-area: 3 / 1 / 4 / 2; 
-  align-items: center;
-  justify-content: center;
-}
-
-.grid_flags img {
-  width: 50px;
-  display: flex;
-  aspect-ratio: 16 / 9;
-  filter: grayscale(1);
-} */
 
 .grid_flags img:hover {
   filter: grayscale(0);
@@ -149,37 +130,23 @@
   }
 }
 
-/* .grid_flags { 
-  grid-area: 4 / 1 / 5 / 2; 
-  display: flex;
-}
 
-.grid_flags img {
-  width: 50px;
-} */
-
-/* .grid_job {
-  grid-area: 4 / 2 / 5 / 3; 
-} */
-
-
-
-
-
-/* .hero_barcode {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  gap: 5rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.barcode_img h3 {
-  margin-bottom: -40px;
-  font-family: 'Glock';
-  font-size: 1rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+/* media queries */
+@media screen and (width >= 768px) {
+  .hero_part {
+    display: flex;
+  }
+  .hero_year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(270deg);
+    margin-left: -3rem;
+    margin-right: -190px;
+  }
+  .hero_year h2 {
+    font-size: 20rem;
+  }
+  .hero_img {
+  }
 }
