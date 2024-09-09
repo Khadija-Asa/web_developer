@@ -63,6 +63,7 @@
 
 .hero_img img {
   width: 100vw;
+  /* height: 30vh; */
 }
 
 /* grid section */
@@ -139,14 +140,19 @@
   .hero_year {
     display: flex;
     align-items: center;
-    justify-content: center;
     transform: rotate(270deg);
-    margin-left: -3rem;
-    margin-right: -190px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 35px;
+    margin-right: -200px;
   }
   .hero_year h2 {
-    font-size: 20rem;
+    font-size: 15rem;
+    margin: 0;
+    font-family: 'Aceh';
   }
-  .hero_img {
+  .hero_img img {
+    /* height: 50vh; */
   }
 }
