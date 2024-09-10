@@ -18,20 +18,21 @@
 .menu_list ul {
   display: flex;
   font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
-  gap: 5px;
+  gap: 10px;
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
 }
 
-.menu_list a {
+.list_element h3 {
   color: var(--White);
   border: 1px solid var(--Gray);
   padding: .4rem .7rem 0 .7rem;
   border-radius: 5px;
+  display: inline-block;
 }
 
-.menu_list a:hover {
+.list_element h3:hover {
   color: var(--Purple);
   border: 1px solid var(--Purple);
 }
@@ -47,8 +48,8 @@
   margin: 3rem 0 -8rem 0;
   display: flex;
   align-items: center;
-  font-size: 15rem;
   font-family: 'Aceh';
+  font-size: 15rem;
   flex-direction: column;
   letter-spacing: 15px;
 }
@@ -63,23 +64,23 @@
 
 .hero_img img {
   width: 100vw;
-  /* height: 30vh; */
 }
 
 /* grid section */
 .hero_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 0px;
-  margin-top: .3rem;
+  grid-column-gap: 5px;
+  grid-row-gap: 3px;
+  margin-top: 10px;
 }
   
 .grid_text { 
   grid-area: 1 / 1 / 2 / 2;
   text-align: justify;
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: clamp(0.8rem, 0.36rem + 2.2vw, 3rem);
+  font-family: 'Pergola';
 }
 
 .grid_asterisque {
@@ -105,18 +106,18 @@
 
 .grid_name { 
   text-transform: uppercase;
-  font-family: 'Milany';
   display: grid;
   justify-items: center;
+  font-size: clamp(0.8rem, 0.36rem + 2.2vw, 3rem);
 }
 
 .grid_name span {
-  font-size: .9rem;
+  font-size: clamp(0.8rem, 0.56rem + 1.2vw, 2rem);
   color: var(--Gray);
 }
 
 .grid_name img {
-  width: 50px;
+  width: clamp(3.125rem, 2.25rem + 4.375vw, 7.5rem);
   display: flex;
   margin-bottom: 10px;
 }
@@ -148,11 +149,36 @@
     margin-right: -200px;
   }
   .hero_year h2 {
-    font-size: 15rem;
     margin: 0;
-    font-family: 'Aceh';
   }
   .hero_img img {
-    /* height: 50vh; */
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .hero_year {
+    margin-left: 60px;
+    margin-right: -220px;
+  }
+  .hero_year h2 {
+    font-size: 18rem;
+  }
+  .hero_img img {
+    height: 500px;
+  }
+}
+
+@media screen and (width >= 1440px) {
+  .hero_year {
+    margin-left: 110px;
+    margin-right: -300px;
+  }
+  .hero_year h2 {
+    font-size: 25rem;
+  }
+  .hero_img img {
+    height: 700px;
   }
 }

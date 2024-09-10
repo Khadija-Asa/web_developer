@@ -8,11 +8,6 @@
 
 /* Fonts */
 @font-face {
-  font-family: 'Aceh';
-  src: url(./../fonts/aceh_darusalam/Aceh\ Darusalam.ttf);
-}
-
-@font-face {
   font-family: 'Assyrian';
   src: url(./../fonts/assyrian/Assyrian.ttf);
 }
@@ -22,10 +17,15 @@
   src: url(./../fonts/lt_glockenspiel/LT\ Glockenspiel\ Black.ttf);
 }
 
+@font-face {
+  font-family: 'Pergola';
+  src: url(./../fonts/pergola/Pergola-Demo.otf);
+}
+
 /* numbers */
 @font-face {
-  font-family: 'Milany';
-  src: url(./../fonts/milany/milany-regular.otf);
+  font-family: 'Aceh';
+  src: url(./../fonts/aceh_darusalam/Aceh\ Darusalam.ttf);
 }
  
 /* Box sizing rules */
@@ -60,7 +60,7 @@ html, body {
 body {
   background-color: var(--Black);
   /* background-image: url("data:image/svg+xml,%3Csvg width='30' height='1' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ae8cfa' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); */
-  font-family: '';
+  font-family: 'Pergola';
   text-rendering: optimizeSpeed;
   color: var(--White);
 }
