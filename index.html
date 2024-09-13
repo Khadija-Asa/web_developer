@@ -14,8 +14,9 @@
   <link rel="shortcut icon" href="./shared/logo.svg" type="image/x-icon">
 
   <!-- styles -->
-   <link rel="stylesheet" href="./styles/main.css">
-   <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/home.css">
 
 </head>
 
@@ -55,12 +56,16 @@
     <div class="hero_part">
       <!-- year -->
       <aside class="hero_year">
-        <h2>
+        <h2 data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="900">
           1994
         </h2>
       </aside>
       <!-- jumbotron -->
-      <div class="hero_img">
+      <div data-aos="fade-left"
+      data-aos-easing="linear"
+      data-aos-duration="900" class="hero_img">
         <img src="./shared/black-background-wallpaper-abstract-paint-texture.jpg" alt="Abstract paint image">
       </div>
     </div>
@@ -68,7 +73,9 @@
     <div class="hero_grid">
 
       <div class="grid_text">
-        <p>
+        <p data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000">
           looking for a notch web developer?
           contact me to discuss your projet needs
           and bring your vision to life. 
@@ -77,11 +84,15 @@
       </div>
 
       <div class="grid_name">
-        <h4>
+        <h4 data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1200">
           khadidja <br>
           <span>web developer, since 2021.</span>
         </h4>
-        <div class="grid_asterisque">
+        <div data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1400" class="grid_asterisque">
           <img src="./shared/asterisque.svg" alt="Asterisque">
         </div>
       </div>
@@ -97,15 +108,21 @@
 
     <div class="title_box">
       <div class="box_name">
-        <h1>web developer</h1>
-        <p>frontend & creative</p>
+        <h1 data-aos="fade-right"
+        data-aos-easing="linear"
+        data-aos-duration="1000">web developer</h1>
+        <p data-aos="fade-right"
+        data-aos-duration="1200">frontend & creative</p>
       </div>
       <div class="box_img">
         <img src="./shared/woman_flower.svg" alt="Woman with flowers">
       </div>
       <div class="box_text">
-        <h1>khadidja a.</h1>
-        <p>french & moroccan</p>
+        <h1 data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1000">khadidja a.</h1>
+        <p data-aos="fade-left"
+        data-aos-duration="1200">french & moroccan</p>
       </div>
     </div>
 
@@ -114,28 +131,44 @@
   <section class="grid_gallery">
 
     <div class="gallery_list">
-      <figure class="gallery_img1">
+      <figure data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-anchor-placement="top-bottom" class="gallery_img1">
         <img src="./shared/tajine.jpg" alt="">
       </figure>
-      <figure class="gallery_img2">
+      <figure data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine" class="gallery_img2">
         <img src="./shared/door_morocco.jpg" alt="">
       </figure>
-      <figure class="gallery_img3">
+      <figure data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine" class="gallery_img3">
         <img src="./shared/oriental-market.jpg" alt="">
       </figure>
-      <figure class="gallery_img4">
+      <figure data-aos="fade-up"
+      data-aos-duration="9000"
+      data-aos-easing="ease-in-sine" class="gallery_img4">
         <img src="./shared/dirham.jpg" alt="">
       </figure>
-      <figure class="gallery_img5">
+      <figure data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine" class="gallery_img5">
         <img src="./shared/lion.jpg" alt="">
       </figure>
-      <figure class="gallery_img6">
+      <figure data-aos="fade-up"
+      data-aos-duration="4000"
+      data-aos-easing="ease-in-sine" class="gallery_img6">
         <img src="./shared/pantheon.jpg" alt="">
       </figure>
-      <figure class="gallery_img7">
+      <figure data-aos="fade-left"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-sine" class="gallery_img7">
         <img src="./shared/oriental-market.jpg" alt="">
       </figure>
-      <figure class="gallery_img8">
+      <figure data-aos="fade-up"
+      data-aos-duration="5000"
+      data-aos-easing="ease-in-sine" class="gallery_img8">
         <img  src="./shared/cityscape_paris.jpg" alt="">
       </figure>
     </div>
@@ -145,9 +178,13 @@
 </main>
 
   <!-- script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollSmoother.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollSmoother.min.js"></script> -->
 
-  <script src="./js/gsap.js"></script>
+  <!-- <script src="./js/gsap.js"></script> -->
 </body>
 </html>
