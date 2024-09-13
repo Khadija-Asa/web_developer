@@ -1,0 +1,70 @@
+main {
+  height: 100vh;
+  width: 100vw;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact_title h1 {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.contact_title span {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.contact_title span:nth-child(1),
+.contact_title span:nth-child(2),
+.contact_title span:nth-child(4) {
+  font-size: 4rem;
+}
+
+.title_text {
+  font-size: .8rem;
+  font-weight: 100;
+  text-transform: none;
+  max-width: 200px;
+}
+
+.contact_title span:nth-last-child(1) {
+  align-self: flex-end;
+}
+
+.contact_element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_element a {
+  color: var(--White);
+}
+
+.contact_element img {
+  width: 10px;
+}
+
+/* Définir l'animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Appliquer l'animation au texte */
+h2 {
+  animation: fadeIn 2s ease-in-out;
+}
+
+

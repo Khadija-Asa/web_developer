@@ -8,11 +8,6 @@
 
 /* Fonts */
 @font-face {
-  font-family: 'Glock';
-  src: url(./../fonts/lt_glockenspiel/LT\ Glockenspiel\ Black.ttf);
-}
-
-@font-face {
   font-family: 'Pergola';
   src: url(./../fonts/pergola/Pergola-Demo.otf);
 }
