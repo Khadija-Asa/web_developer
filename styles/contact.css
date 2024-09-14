@@ -1,4 +1,4 @@
-main {
+.contact {
   height: 100vh;
   width: 100vw;
   padding: .5rem;
@@ -8,15 +8,31 @@ main {
 }
 
 .contact_title h1 {
+  height: 40vh;
+  font-family: 'Bold';
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+  justify-content: space-between;
 }
 
-.contact_title span {
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
+.contact_title span:nth-last-child(1) {
+  align-self: flex-end;
+}
+
+.contact_title .anim {
+  animation: ScaleBottom 1s ease;
+}
+
+@keyframes ScaleBottom {
+	0% {
+		transform: scaleY(0);
+		transform-origin: 0% 100%;
+	}
+	100% {
+		transform: scaleY(1);
+		transform-origin: 0% 100%;
+	}
 }
 
 .contact_title span:nth-child(1),
@@ -26,45 +42,50 @@ main {
 }
 
 .title_text {
+  font-family: 'Pergola';
   font-size: .8rem;
   font-weight: 100;
   text-transform: none;
   max-width: 200px;
+  animation: ScaleBottom 1s .2s ease;
 }
 
-.contact_title span:nth-last-child(1) {
-  align-self: flex-end;
-}
-
+/* datas */
 .contact_element {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.contact_element a {
-  color: var(--White);
 }
 
 .contact_element img {
   width: 10px;
 }
 
-/* Définir l'animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* bottom */
+.contact_bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
 }
 
-/* Appliquer l'animation au texte */
-h2 {
-  animation: fadeIn 2s ease-in-out;
+.contact_bottom button { 
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+  display: flex;
+  height: max-content;
+  border: 1px solid var(--Gray);
+  padding: .4rem .7rem 0 .7rem;
+  border-radius: 5px;
+  /* width: 500px; */
+  text-transform: uppercase;
+  background: transparent;
+  display: inline-block;
 }
 
+.contact_bottom button:hover {
+  color: var(--Purple);
+  border: 1px solid var(--Purple);
+}
 
+.contact_gif iframe {
+  display: flex;
+  height: 100%;
+}

@@ -6,10 +6,16 @@
   --Gray: #d1d1d1;
 }
 
-/* Fonts */
+/* main font */
 @font-face {
   font-family: 'Pergola';
   src: url(./../fonts/pergola/Pergola-Demo.otf);
+}
+
+/* bold font */
+@font-face {
+  font-family: 'Bold';
+  src: url(./../fonts/the_bold_font/THE\ BOLD\ FONT\ -\ FREE\ VERSION\ -\ 2023.otf);
 }
 
 /* numbers */
@@ -35,6 +41,7 @@ a, li, ul {
   text-decoration: none;
   margin: 0;
   padding: 0;
+  color: var(--White);
 }
 
 /* Set core root defaults */
