@@ -8,7 +8,6 @@
 }
 
 .contact_title h1 {
-  height: 40vh;
   font-family: 'Bold';
   display: flex;
   flex-direction: column;
@@ -16,11 +15,11 @@
   justify-content: space-between;
 }
 
-.contact_title span:nth-last-child(1) {
+/* .contact_title span:nth-last-child(1) {
   align-self: flex-end;
-}
+} */
 
-.contact_title .anim {
+.anim {
   animation: ScaleBottom 1s ease;
 }
 
@@ -43,41 +42,50 @@
 
 .title_text {
   font-family: 'Pergola';
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 100;
   text-transform: none;
   max-width: 200px;
   animation: ScaleBottom 1s .2s ease;
+  text-align: justify;
+  padding-bottom: 12px;
 }
 
-/* datas */
+/* contact datas */
 .contact_element {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
-.contact_element img {
-  width: 10px;
+.contact_element ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact_element h2,
+.contact_element h3 {
+  font-family: 'Bold';
+  letter-spacing: normal;
 }
 
 /* bottom */
 .contact_bottom {
   display: flex;
-  align-items: end;
-  justify-content: space-evenly;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .contact_bottom button { 
   font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
-  display: flex;
-  height: max-content;
   border: 1px solid var(--Gray);
-  padding: .4rem .7rem 0 .7rem;
+  padding: .5rem .7rem .2rem .7rem;
   border-radius: 5px;
-  /* width: 500px; */
   text-transform: uppercase;
   background: transparent;
-  display: inline-block;
 }
 
 .contact_bottom button:hover {
@@ -85,7 +93,11 @@
   border: 1px solid var(--Purple);
 }
 
+.back_button a:hover {
+  animation: ScaleBottom 1s ease;
+}
+
 .contact_gif iframe {
   display: flex;
-  height: 100%;
+  width: 200px;
 }
