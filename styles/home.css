@@ -186,12 +186,17 @@
 }
 
 .title_box {
+  font-family: 'Bold';
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: clamp(1.2rem, 0.64rem + 2.8vw, 4rem);
   text-align: center;
+}
+
+.title_box p {
+  font-family: 'Pergola';
 }
 
 .box_img img {

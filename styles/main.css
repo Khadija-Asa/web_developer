@@ -89,3 +89,19 @@ select {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* global animation */
+.anim {
+  animation: ScaleBottom 1s ease;
+}
+
+@keyframes ScaleBottom {
+	0% {
+		transform: scaleY(0);
+		transform-origin: 100% 100%;
+	}
+	100% {
+		transform: scaleY(1);
+		transform-origin: 100% 100%;
+	}
+}
