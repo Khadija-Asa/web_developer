@@ -1,16 +1,23 @@
 .contact {
   height: 100vh;
   width: 100vw;
-  padding: .5rem;
+  padding: 1rem .5rem .2rem .5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 50px;
 }
 
 .contact hr {
   opacity: .2;
   width: 250px;
-  margin: -10px 0 5px 0;
+}
+
+.contact_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+  height: 100vh;
 }
 
 .contact_title h1 {
@@ -30,6 +37,7 @@
 .contact_title span:nth-child(4) {
   display: flex;
   align-items: end;
+  font-style: italic;
 }
 
 .title_text {
@@ -58,10 +66,28 @@
   text-transform: uppercase;
 }
 
-.contact_element h2,
 .contact_element h3 {
-  font-family: 'Bold';
   letter-spacing: normal;
+  font-weight: 900;
+}
+
+.contact_element h3 {
+  font-size: 1rem;
+}
+
+/* social media */
+.social_media {
+  display: flex;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.social_media li {
+  transition: all .5s ease;
+}
+
+.social_media li:hover {
+  transform: translate(0, -2px);
 }
 
 /* bottom */
