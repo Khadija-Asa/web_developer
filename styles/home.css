@@ -1,11 +1,13 @@
 /* header */
 .menu {
-  position: sticky;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: .5rem .8rem 0 .8rem;
+  z-index: 99;
+  background-color: var(--Black);
 }
 
 /* logo */
@@ -20,21 +22,21 @@
   font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
   gap: 10px;
   text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .list_element h3 {
-  color: var(--White);
   border: 1px solid var(--Gray);
   padding: .4rem .7rem 0 .7rem;
   border-radius: 5px;
+  width: 100px;
+  display: flex;
   display: inline-block;
+  transition: all .5s ease;
 }
 
 .list_element h3:hover {
-  color: var(--Purple);
-  border: 1px solid var(--Purple);
+  transform: translate(0, -5px);
 }
 
 /* hero section */
