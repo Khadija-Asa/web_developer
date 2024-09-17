@@ -1,5 +1,5 @@
 .contact {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   padding: 1rem .5rem .2rem .5rem;
   display: flex;
@@ -7,9 +7,15 @@
   gap: 40px;
 }
 
-.contact hr {
-  opacity: .2;
+.title_line {
+  margin-top: -15px;
+  opacity: .5;
   width: 250px;
+}
+
+.contact_line {
+  opacity: .5;
+  width: 125px;
 }
 
 .contact_main {
@@ -17,7 +23,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   gap: 2rem;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .contact_title h1 {
@@ -31,13 +37,19 @@
 .contact_title span:nth-child(1),
 .contact_title span:nth-child(2),
 .contact_title span:nth-child(4) {
-  font-size: 4rem;
+  font-size: clamp(4rem, 2.4rem + 8vw, 12rem);
+}
+
+.contact_title span:nth-child(2) {
+  animation: ScaleBottom 1s .1s ease;
 }
 
 .contact_title span:nth-child(4) {
   display: flex;
-  align-items: end;
+  align-self: end;
   font-style: italic;
+  /* margin-right: 20px; */
+  animation: ScaleBottom 1s .3s ease;
 }
 
 .title_text {
@@ -68,16 +80,15 @@
 
 .contact_element h3 {
   letter-spacing: normal;
-  font-weight: 900;
-}
-
-.contact_element h3 {
   font-size: 1rem;
+  font-weight: 900;
+  animation: ScaleBottom 1s .2s ease;
 }
 
 /* social media */
-.social_media {
+.contact_social ul {
   display: flex;
+  flex-direction: row;
   gap: 10px;
   text-transform: uppercase;
 }
@@ -116,3 +127,14 @@
   display: flex;
   width: 200px;
 }
+
+/* media queries */
+@media screen and (width >= 768px) {
+  hr {
+    display: none;
+  }
+  .contact_element {
+    display: flex;
+    flex-direction: row;
+  }
+}0
