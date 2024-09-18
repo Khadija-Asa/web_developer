@@ -105,3 +105,7 @@ select {
 		transform-origin: 100% 100%;
 	}
 }
+
+main {
+  padding-top: 50px !important;
+}

@@ -4,9 +4,9 @@ footer {
   text-transform: uppercase;
   border-top: 1px solid var(--White);
   font-family: 'Pergola';
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100vw;
   background-color: var(--Black);
+  margin-top: 5rem;
 }
 
 .footer {
