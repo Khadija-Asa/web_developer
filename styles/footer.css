@@ -45,7 +45,7 @@ footer {
 .footer_button a {
   color: var(--White);
   border: 1px solid var(--Gray);
-  padding: .4rem .7rem 0 .7rem;
+  /* padding: .4rem .7rem 0 .7rem; */
   border-radius: 5px;
   display: inline-block;
   transition: all .5s ease;
