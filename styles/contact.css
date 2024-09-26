@@ -1,22 +1,10 @@
 .contact {
-  /* height: 100vh; */
   width: 100vw;
   padding: 1rem .5rem .2rem .5rem;
   display: flex;
   flex-direction: column;
   gap: 40px;
   margin-top: 3rem;
-}
-
-.title_line {
-  margin-top: -15px;
-  opacity: .5;
-  width: 250px;
-}
-
-.contact_line {
-  opacity: .5;
-  width: 125px;
 }
 
 .contact_main {
@@ -84,13 +72,14 @@
 
 .contact_element a:hover {
   color: var(--Purple);
+  font-weight: 900;
 }
 
 /* gif */
 .contact_gif {
   display: flex;
-  justify-content: end;
-  filter: grayscale(.8);
+  justify-content: center;
+  align-items: center;
 }
 
 /* media queries */
@@ -104,5 +93,109 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .contact_gif {
+    position: absolute;
+    right: .8rem;
+    top: 6.4rem;
+  }
+}
+
+/* marquee */
+.marquee {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: clamp(3.125rem, 2.5rem + 3.125vw, 6.25rem);
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 0.8rem + 3.5vw, 5rem);
+  color: var(--Black);
+  background-color: var(--White);
+  transform: rotate(1deg);
+}
+
+.marquee_second {
+  transform: rotate(-1deg);
+}
+
+.marquee div {
+  min-width: 100%;
+  position: absolute;
+}
+
+.marquee div span,
+.marquee div:after {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  white-space: nowrap;
+}
+
+/* first marquee */
+.marquee div span {
+  animation: marquee 40s infinite linear;
+}
+
+.marquee div:after {
+  animation: marquee1 40s infinite linear;
+  content: attr(data-text);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes marquee {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+
+@keyframes marquee1 {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+/* second marquee */
+.marquee_second div span {
+  animation: marquee2 40s infinite linear;
+}
+
+.marquee_second div:after {
+  animation: marquee3 40s infinite linear;
+  content: attr(data-text);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes marquee2 {
+  0% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+@keyframes marquee3 {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 100%;
   }
 }

@@ -28,6 +28,10 @@ footer {
   font-family: 'Bold';
 }
 
+.footer_title span {
+  text-decoration: none !important;
+}
+
 .footer_title h6 {
   font-size: 1.5rem;
   font-style: italic;
@@ -46,7 +50,6 @@ footer {
 .footer_button a {
   color: var(--White);
   border: 1px solid var(--Gray);
-  /* padding: .4rem .7rem 0 .7rem; */
   border-radius: 5px;
   display: inline-block;
   transition: all .5s ease;
@@ -78,17 +81,3 @@ footer {
 .bottom-title a {
   font-size: clamp(0.5rem, 0.46rem + 0.2vw, 0.7rem);
 }
-
-.bottom_title a:hover {
-  color: var(--Orange);
-}
-
-/* .main-style {
-  padding: 0 1.5rem 0 1.5rem;
-} */
-
-/* @media screen and (min-width: 768px) { 
-  .main-style {
-    padding: 0 6rem 0 6rem;
-  }
-} */

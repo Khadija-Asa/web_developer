@@ -12,6 +12,12 @@
   src: url(./../fonts/pergola/Pergola-Demo.otf);
 }
 
+/* second font */
+@font-face {
+  font-family: 'Saudagar';
+  src: url(./../fonts/saudagar/Saudagar.ttf);
+}
+
 /* bold font */
 @font-face {
   font-family: 'Bold';
@@ -106,6 +112,21 @@ select {
 	}
 }
 
+/* common css */
 main {
   padding-top: 50px !important;
+}
+
+.highlight {
+  font-family: 'Saudagar';
+  text-decoration: .1px underline;
+  text-underline-offset: 2px;
+}
+
+.element_bg {
+  border: 30px solid var(--Gray);
+  filter: blur(70px);
+  position: absolute;
+  width: 13rem;
+  z-index: -99;
 }
