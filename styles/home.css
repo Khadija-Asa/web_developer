@@ -16,6 +16,7 @@
 .asterisque img {
   position: absolute;
   opacity: .5;
+  width: clamp(12.5rem, 8.75rem + 18.75vw, 31.25rem);
 }
 
 /* logo */

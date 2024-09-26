@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-top: 3rem;
 }
 
 .title_line {
@@ -23,7 +24,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   gap: 2rem;
-  /* height: 100vh; */
 }
 
 .contact_title h1 {
@@ -44,23 +44,12 @@
   animation: ScaleBottom 1s .1s ease;
 }
 
-.contact_title span:nth-child(4) {
+.title_bottom {
   display: flex;
   align-self: end;
   font-style: italic;
-  /* margin-right: 20px; */
+  margin-right: clamp(0.3125rem, 0.125rem + 0.9375vw, 1.25rem);
   animation: ScaleBottom 1s .3s ease;
-}
-
-.title_text {
-  font-family: 'Pergola';
-  font-size: .9rem;
-  font-weight: 100;
-  text-transform: none;
-  max-width: 200px;
-  animation: ScaleBottom 1s .2s ease;
-  text-align: justify;
-  padding-bottom: 12px;
 }
 
 /* contact datas */
@@ -68,6 +57,15 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.title_text {
+  font-size: clamp(0.9rem, 0.68rem + 1.1vw, 2rem);
+  max-width: clamp(15.625rem, 9.75rem + 29.375vw, 45rem);
+  text-transform: uppercase;
+  animation: ScaleBottom 1s .2s ease;
+  text-align: justify;
+  padding-bottom: 12px;
 }
 
 .contact_element ul {
@@ -80,61 +78,31 @@
 
 .contact_element h3 {
   letter-spacing: normal;
-  font-size: 1rem;
-  font-weight: 900;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
   animation: ScaleBottom 1s .2s ease;
 }
 
-/* social media */
-.contact_social ul {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  text-transform: uppercase;
-}
-
-.social_media li {
-  transition: all .5s ease;
-}
-
-.social_media li:hover {
-  transform: translate(0, -2px);
-}
-
-/* bottom */
-/* .contact_bottom {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.contact_bottom button { 
-  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
-  border: 1px solid var(--Gray);
-  padding: .5rem .7rem .2rem .7rem;
-  border-radius: 5px;
-  text-transform: uppercase;
-  background: transparent;
-}
-
-.contact_bottom button:hover {
+.contact_element a:hover {
   color: var(--Purple);
-  border: 1px solid var(--Purple);
-} */
+}
 
 /* gif */
-.contact_gif iframe {
+.contact_gif {
   display: flex;
-  width: 200px;
+  justify-content: end;
+  filter: grayscale(.8);
 }
 
 /* media queries */
 @media screen and (width >= 768px) {
-  hr {
-    display: none;
-  }
   .contact_element {
     display: flex;
+    justify-content: center;
+    padding: 3rem 10rem;
+  }
+  .contact_element ul {
+    display: flex;
     flex-direction: row;
+    gap: 30px;
   }
 }

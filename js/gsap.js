@@ -32,5 +32,5 @@ gsap.to(".asterisque", {
   },
   x: 400,
   rotation: 720,
-  ease: "linear"
+  ease: "ease"
 });
