@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 40px;
   margin-top: 3rem;
+  position: relative;
 }
 
 .contact_main {
@@ -38,6 +39,11 @@
   font-style: italic;
   margin-right: clamp(0.3125rem, 0.125rem + 0.9375vw, 1.25rem);
   animation: ScaleBottom 1s .3s ease;
+}
+
+/* asterisque */
+.contact .asterisque img {
+  display: none;
 }
 
 /* contact datas */
@@ -97,10 +103,18 @@
 }
 
 @media screen and (width >= 1024px) {
-  .contact_gif {
+  .contact .asterisque img {
+    display: initial;
+    width: 800px;
     position: absolute;
-    right: .8rem;
-    top: 6.4rem;
+    right: -50px;
+    top: 100px;
+    animation: spinner 30s linear infinite; 
+  }
+  @keyframes spinner {
+    to { 
+      transform: rotate(360deg); 
+    }
   }
 }
 
