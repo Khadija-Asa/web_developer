@@ -87,17 +87,19 @@
 
 .accordion_element {
   display: flex;
-  gap: 10px;
+  gap: clamp(0.625rem, 0.125rem + 2.5vw, 3.125rem);
+  padding-top: 8px;
+  font-size: clamp(0.8rem, 0.36rem + 2.2vw, 3rem);
 }
 
 .accordion_title {
-  font-family: initial;
-  font-size: 1rem;
+  font-family: 'Pergola';
 }
 
 .accordion_number {
   font-family: 'Aceh';
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding-top: 1px;
 }
 
 .accordion_git {
@@ -105,4 +107,11 @@
   border-radius: 5px;
   border: 1px solid var(--Gray);
   text-transform: capitalize;
+  padding: .5rem .8rem;
+  transition: all .5s ease;
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+}
+
+.accordion_git:hover {
+  transform: translate(0, -2px);
 }

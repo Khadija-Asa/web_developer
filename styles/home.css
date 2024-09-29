@@ -50,8 +50,6 @@
 
 .list_element h3:hover {
   transform: translate(0, -2px);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
 }
 
 /* hero section */
@@ -158,6 +156,10 @@
   align-items: center;
   font-size: clamp(1.2rem, 0.64rem + 2.8vw, 4rem);
   text-align: center;
+}
+
+.title_box span {
+  text-decoration: none !important;
 }
 
 .title_box p {
