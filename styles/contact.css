@@ -51,28 +51,49 @@
   padding-bottom: 12px;
 }
 
-.contact_element ul {
+.contact_social ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.contact_element h3 {
-  letter-spacing: normal;
-  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+.contact_social h3,
+.contact_social a {
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.9rem, 0.86rem + 0.2vw, 1.1rem);
   animation: ScaleBottom 1s .2s ease;
+  letter-spacing: 1.5px;
+  transition: all .5s ease;
+  font-family: 'Saudagar';
 }
 
-.contact_element a:hover {
-  color: var(--Purple);
-  font-weight: 900;
+.contact_social h3 svg {
+  width: 15px;
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
+.contact_social h3 span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  margin-top: 4px;
+}
+
+.contact_social h3:hover svg {
+  transform: translateX(5px) rotate(-45deg);
+}
+
+.contact_social h3:hover span {
+  transform: translateX(7px);
+}
+
+/* contact img */
 .contact_img img {
   object-fit: cover;
-  width: 100%;
+  width: clamp(15.625rem, 9.75rem + 29.375vw, 45rem);
   height: 50px;
 }
 
@@ -96,13 +117,13 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  height: clamp(3.125rem, 2.5rem + 3.125vw, 6.25rem);
+  height: clamp(2.5rem, 2.1rem + 2vw, 4.5rem);
   overflow: hidden;
   padding: 0;
   position: relative;
   width: 100%;
   text-transform: uppercase;
-  font-size: clamp(1.5rem, 0.8rem + 3.5vw, 5rem);
+  font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
   color: var(--Black);
   background-color: var(--White);
 }
@@ -122,11 +143,11 @@
 
 /* first marquee */
 .marquee div span {
-  animation: marquee 100s infinite linear;
+  animation: marquee 40s infinite linear;
 }
 
 .marquee div:after {
-  animation: marquee1 100s infinite linear;
+  animation: marquee1 40s infinite linear;
   content: attr(data-text);
   left: 0;
   position: absolute;
@@ -153,11 +174,11 @@
 
 /* second marquee */
 .marquee_second div span {
-  animation: marquee2 100s infinite linear;
+  animation: marquee2 40s infinite linear;
 }
 
 .marquee_second div:after {
-  animation: marquee3 100s infinite linear;
+  animation: marquee3 40s infinite linear;
   content: attr(data-text);
   left: 0;
   position: absolute;

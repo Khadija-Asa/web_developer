@@ -58,7 +58,7 @@ footer {
 }
 
 .footer_button a:hover {
-  transform: translate(0, -5px);
+  transform: translate(0, -2px);
 }
 
 /* bottom */

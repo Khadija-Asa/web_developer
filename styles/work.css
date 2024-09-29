@@ -1,0 +1,108 @@
+/* paragraph */
+.work_text {
+  display: flex;
+  justify-content: center;
+}
+
+.work_text p {
+  text-transform: uppercase;
+  text-align: justify;
+  max-width: 80rem;
+  background-color: var(--Black);
+  padding: 2.5rem 1.5rem;
+  margin: 1rem;
+  border-radius: 5px;
+  font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+}
+
+.work_text img {
+  width: 50px;
+  height: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.work_text img:nth-child(4) {
+  width: 10px;
+  object-fit: contain;
+}
+
+/* skills list */
+.list_skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.skills {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.skills li {
+  border: 1px solid var(--Gray);
+  opacity: .6; 
+  padding: .6rem 1rem .4rem 1rem;
+  border-radius: 5px;
+  background-color: var(--Black);
+  transition: all .5s ease;
+}
+
+.skills li:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: translate(0, -2px);
+}
+
+/* media queries */
+@media screen and (width >= 768px) {
+  .work_text p {
+    padding: 4.5rem 4rem;
+  }
+}
+
+/* accordion */
+.accordion_list {
+  width: 100%;
+}
+
+.accordion_list li {
+  border-bottom: 1px solid var(--Gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.accordion_list li:nth-last-child(1) {
+  border: none;
+}
+
+.accordion_element {
+  display: flex;
+  gap: 10px;
+}
+
+.accordion_title {
+  font-family: initial;
+  font-size: 1rem;
+}
+
+.accordion_number {
+  font-family: 'Aceh';
+  font-size: 2rem;
+}
+
+.accordion_git {
+  background-color: var(--Black);
+  border-radius: 5px;
+  border: 1px solid var(--Gray);
+  text-transform: capitalize;
+}
