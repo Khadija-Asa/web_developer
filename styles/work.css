@@ -2,13 +2,13 @@
 .work_text {
   display: flex;
   justify-content: center;
+  padding-bottom: clamp(5rem, 4rem + 5vw, 10rem);
 }
 
 .work_text p {
   text-transform: uppercase;
   text-align: justify;
   max-width: 80rem;
-  background-color: var(--Black);
   padding: 2.5rem 1.5rem;
   margin: 1rem;
   border-radius: 5px;
@@ -33,10 +33,11 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding-bottom: clamp(10rem, 9rem + 5vw, 15rem);
 }
 
 .skills {
-  max-width: 900px;
+  max-width: 750px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -51,6 +52,17 @@
   border-radius: 5px;
   background-color: var(--Black);
   transition: all .5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.skills li svg {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  margin-top: -3px;
 }
 
 .skills li:hover {
@@ -69,37 +81,73 @@
 /* accordion */
 .accordion_list {
   width: 100%;
+  padding-bottom: 15rem;
 }
 
 .accordion_list li {
-  border-bottom: 1px solid var(--Gray);
+  border-top: 1px solid var(--Gray);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: clamp(1.2rem, 0.74rem + 2.3vw, 3.5rem);
   width: 100%;
   text-transform: uppercase;
+  opacity: .7;
+  border-left: none;
+  border-right: none;
+  background: linear-gradient(white, white) 0% 100% / 100% 0% no-repeat;
+  transition: background-size 0.5s ease;
+  position: relative;
+}
+
+.tooltip_image {
+  display: none;
+  position: absolute;
+  bottom: -10%;
+  left: 40%;
+  width: clamp(18.75rem, 16.25rem + 12.5vw, 31.25rem);
+  z-index: 10;
+  transition: 0.5s ease;
+}
+
+.accordion_list li:hover .tooltip_image {
+  display: block;
+}
+
+.tooltip_image img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+@media screen and (width < 1024px) {
+  .accordion_list li:hover .tooltip_image {
+    display: none;
+  }
 }
 
 .accordion_list li:nth-last-child(1) {
-  border: none;
+  border-bottom: 1px solid var(--Gray);
+}
+
+.accordion_list li:hover {
+  opacity: 1;
+  color: var(--Black);
+  background-size: 100% 100%;
 }
 
 .accordion_element {
   display: flex;
   gap: clamp(0.625rem, 0.125rem + 2.5vw, 3.125rem);
-  padding-top: 8px;
+  padding-top: 5px;
   font-size: clamp(0.8rem, 0.36rem + 2.2vw, 3rem);
-}
-
-.accordion_title {
-  font-family: 'Pergola';
+  align-items: center;
 }
 
 .accordion_number {
   font-family: 'Aceh';
-  font-size: 1.5rem;
-  padding-top: 1px;
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 4rem);
+  padding-top: clamp(0.0625rem, -0.075rem + 0.6875vw, 0.75rem);
 }
 
 .accordion_git {
