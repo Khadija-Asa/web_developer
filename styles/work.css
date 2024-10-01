@@ -27,6 +27,19 @@
   object-fit: contain;
 }
 
+.work {
+  position: relative;
+}
+
+.work lottie-player {
+  filter: drop-shadow(0 0 .3rem var(--Purple));
+  position: absolute;
+  z-index: -1;
+  height: 80rem;
+  left: 0;
+  width: 100%;
+}
+
 /* skills list */
 .list_skills {
   display: flex;
@@ -78,13 +91,45 @@
   }
 }
 
+/* accordion text */
+.work_accordion h1 {
+  text-transform: uppercase;
+  padding: 5rem 1rem;
+  text-align: justify;
+  font-size: clamp(2rem, 1.4rem + 3vw, 5rem);
+  font-family: 'Bold';
+}
+
+.work_accordion img {
+  width: clamp(0.9375rem, 0.875rem + 0.3125vw, 1.25rem);
+  margin-left: -3px;
+}
+
+.work_accordion p {
+  max-width: 500px;
+  margin-top: 20px;
+  font-family: 'Pergola';
+  font-weight: 100;
+  font-size: initial;
+  text-transform: none;
+}
+
 /* accordion */
 .accordion_list {
   width: 100%;
   padding-bottom: 15rem;
 }
 
+.accordion_element {
+  display: flex;
+  gap: clamp(0.625rem, 0.125rem + 2.5vw, 3.125rem);
+  padding-top: 5px;
+  font-size: clamp(0.8rem, 0.36rem + 2.2vw, 3rem);
+  align-items: center;
+}
+
 .accordion_list li {
+  font-family: 'bold';
   border-top: 1px solid var(--Gray);
   display: flex;
   align-items: center;
@@ -100,32 +145,6 @@
   position: relative;
 }
 
-.tooltip_image {
-  display: none;
-  position: absolute;
-  bottom: -10%;
-  left: 40%;
-  width: clamp(18.75rem, 16.25rem + 12.5vw, 31.25rem);
-  z-index: 10;
-  transition: 0.5s ease;
-}
-
-.accordion_list li:hover .tooltip_image {
-  display: block;
-}
-
-.tooltip_image img {
-  width: 100%;
-  object-fit: cover;
-  height: auto;
-}
-
-@media screen and (width < 1024px) {
-  .accordion_list li:hover .tooltip_image {
-    display: none;
-  }
-}
-
 .accordion_list li:nth-last-child(1) {
   border-bottom: 1px solid var(--Gray);
 }
@@ -136,21 +155,46 @@
   background-size: 100% 100%;
 }
 
-.accordion_element {
-  display: flex;
-  gap: clamp(0.625rem, 0.125rem + 2.5vw, 3.125rem);
-  padding-top: 5px;
-  font-size: clamp(0.8rem, 0.36rem + 2.2vw, 3rem);
-  align-items: center;
+/* tooltip */
+.tooltip_image {
+  display: none;
+  position: absolute;
+  bottom: -10%;
+  left: 40%;
+  width: clamp(18.75rem, 16.25rem + 12.5vw, 31.25rem);
+  z-index: 10;
 }
 
+.tooltip_image img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  filter: drop-shadow(10px 0 4rem var(--Black));
+}
+
+.accordion_list li:hover .tooltip_image {
+  display: block;
+
+  opacity: 1;
+}
+
+/* media queries */
+@media screen and (width < 1024px) {
+  .accordion_list li:hover .tooltip_image {
+    display: none;
+  }
+}
+
+/* number */
 .accordion_number {
   font-family: 'Aceh';
   font-size: clamp(1.5rem, 1rem + 2.5vw, 4rem);
   padding-top: clamp(0.0625rem, -0.075rem + 0.6875vw, 0.75rem);
 }
 
+/* button git */
 .accordion_git {
+  font-family: 'Pergola';
   background-color: var(--Black);
   border-radius: 5px;
   border: 1px solid var(--Gray);
