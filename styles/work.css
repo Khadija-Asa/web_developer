@@ -3,41 +3,56 @@
   display: flex;
   justify-content: center;
   padding-bottom: clamp(5rem, 4rem + 5vw, 10rem);
+  flex-direction: column;
+  align-items: center;
 }
 
 .work_text p {
+  padding-bottom: clamp(5rem, 4rem + 5vw, 10rem);
   text-transform: uppercase;
   text-align: justify;
-  max-width: 80rem;
-  padding: 2.5rem 1.5rem;
-  margin: 1rem;
-  border-radius: 5px;
+  max-width: 70rem;
+  margin: 4rem 1rem 0 1rem;
   font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+  line-height: clamp(1.25rem, 0.9375rem + 1.5625vw, 2.8125rem);
 }
 
 .work_text img {
-  width: 50px;
-  height: 10px;
+  width: clamp(3.125rem, 2.75rem + 1.875vw, 5rem);
+  height: clamp(0.625rem, 0.4375rem + 0.9375vw, 1.5625rem);
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: clamp(0.3125rem, -0.25rem + 2.8125vw, 3.125rem);
 }
 
 .work_text img:nth-child(4) {
-  width: 10px;
+  width: clamp(0.625rem, 0.125rem + 2.5vw, 3.125rem);
   object-fit: contain;
 }
 
-.work {
-  position: relative;
+.work_lottie {
+  display: none;
 }
 
-.work lottie-player {
-  filter: drop-shadow(0 0 .3rem var(--Purple));
-  position: absolute;
-  z-index: -1;
-  height: 80rem;
-  left: 0;
-  width: 100%;
+/* media queries */
+@media screen and (width >= 768px) {
+  .work_text p {
+    padding: 4.5rem 4rem;
+  }
+}
+
+/* lottie */
+@media screen and (width >= 1440px) {
+  .work_lottie {
+    display: flex;
+  }
+  .work_lottie lottie-player {
+    filter: drop-shadow(0 0 .3rem var(--Purple));
+    width: 25rem;
+    height: auto;
+    position: absolute;
+    top: 25rem;
+    margin-left: 5rem;
+  }
 }
 
 /* skills list */
@@ -56,11 +71,11 @@
   gap: 20px;
   justify-content: center;
   text-transform: capitalize;
+  opacity: .7; 
 }
 
 .skills li {
   border: 1px solid var(--Gray);
-  opacity: .6; 
   padding: .6rem 1rem .4rem 1rem;
   border-radius: 5px;
   background-color: var(--Black);
@@ -69,26 +84,22 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  cursor: pointer;
 }
 
 .skills li svg {
   display: flex;
   align-items: center;
   width: 20px;
-  margin-top: -3px;
+  margin-top: -4px;
 }
 
-.skills li:hover {
-  opacity: 1;
-  cursor: pointer;
+.skills:hover li {
   transform: translate(0, -2px);
 }
 
-/* media queries */
-@media screen and (width >= 768px) {
-  .work_text p {
-    padding: 4.5rem 4rem;
-  }
+.skills li:hover svg{
+  color: var(--Purple);
 }
 
 /* accordion text */
@@ -117,7 +128,7 @@
 /* accordion */
 .accordion_list {
   width: 100%;
-  padding-bottom: 15rem;
+  padding-bottom: clamp(8rem, 6.6rem + 7vw, 15rem);
 }
 
 .accordion_element {
@@ -157,25 +168,32 @@
 
 /* tooltip */
 .tooltip_image {
-  display: none;
+  /* display: none; */
+  opacity: 0;
   position: absolute;
   bottom: -10%;
   left: 40%;
   width: clamp(18.75rem, 16.25rem + 12.5vw, 31.25rem);
   z-index: 10;
+
+  overflow: hidden;
+  transition: opacity 0.3s ease-out;
 }
 
 .tooltip_image img {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path .8s ease-out;
   width: 100%;
   object-fit: cover;
-  height: auto;
-  filter: drop-shadow(10px 0 4rem var(--Black));
+  height: 100%;
 }
 
 .accordion_list li:hover .tooltip_image {
-  display: block;
-
   opacity: 1;
+}
+
+li:hover .tooltip_image img {
+  clip-path: inset(0 0 0 0);
 }
 
 /* media queries */

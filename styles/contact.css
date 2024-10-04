@@ -99,18 +99,8 @@
 
 /* marquee */
 .double_marquee {
-  margin-top: 3rem;
-}
-
-.contact_gif {
-  display: flex;
-  justify-content: end;
-  margin-bottom: 7rem;
-  filter: grayscale(.5);
-}
-
-.contact_gif img {
-  border: 1px solid white;
+  padding-top: clamp(5rem, 4rem + 5vw, 10rem);
+  padding-bottom: 10rem;
 }
 
 .marquee {
@@ -125,7 +115,8 @@
   text-transform: uppercase;
   font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
   color: var(--Black);
-  background-color: var(--White);
+  background-color: var(--Gray);
+  transform: rotate(1deg);
 }
 
 .marquee div {
@@ -222,4 +213,12 @@
     display: flex;
     flex-direction: row;
   }
+}
+
+/* gif */
+.contact_gif {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 10rem;
+  filter: grayscale(.8);
 }

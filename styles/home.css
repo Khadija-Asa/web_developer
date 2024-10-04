@@ -149,7 +149,6 @@
 }
 
 .title_box {
-  font-family: 'Bold';
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -201,6 +200,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .gallery_list {
   overflow: hidden;
   display: grid;
@@ -216,11 +216,21 @@
   height: 80%;
   object-fit: cover;
   filter: grayscale(1);
-  border: 1px solid var(--White);
+}
+
+.gallery img {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1.5s ease-out;
+  object-fit: cover;
+}
+
+.gallery:hover img {
+  clip-path: inset(100% 0 0 0);
 }
 
 .gallery_list figcaption {
   font-size: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+  display: flex;
 }
 
 .gallery_list img:hover {
