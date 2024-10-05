@@ -21,6 +21,7 @@
   flex-direction: column;
   text-transform: uppercase;
   justify-content: space-between;
+  gap: clamp(1rem, 0.2rem + 4vw, 5rem);
 }
 
 .contact_title span {
@@ -34,6 +35,11 @@
 .contact_title span:nth-child(3) {
   font-style: italic;
   animation: ScaleBottom 1s .3s ease;
+  color: var(--Black);
+  background-color: var(--Gray);
+  padding: 1rem 1rem 0 0;
+  width: max-content;
+  border-radius: 5px;
 }
 
 /* contact datas */
@@ -94,7 +100,7 @@
 .contact_img img {
   object-fit: cover;
   width: clamp(15.625rem, 9.75rem + 29.375vw, 45rem);
-  height: 50px;
+  height: clamp(3.125rem, 2.5rem + 3.125vw, 6.25rem);
 }
 
 /* marquee */
@@ -212,6 +218,9 @@
   .contact_main {
     display: flex;
     flex-direction: row;
+  }
+  .contact_title span:nth-child(3) {
+    padding: 2.5rem 3rem 0 0;
   }
 }
 

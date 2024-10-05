@@ -23,16 +23,22 @@
 
 <body>
 
+  <!-- overlay -->
+  <div class="overlay first">
+    KHADIDJA
+  </div>
+  <div class="overlay second"></div>
+
   <!-- header -->
   <header class="menu">
 
-    <a href="index.html" class="menu_brand">
+    <a data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="500" href="index.html" class="menu_brand">
       <img loading="lazy" src="./shared/logo.svg" alt="Logo">
     </a>
 
     <nav class="menu_list">
       <ul class="list_element">
-        <li>
+        <li data-aos="fade-down" data-aos-delay="550">
           <a href="work.html">
             <h3>
               Work ↗
@@ -40,7 +46,7 @@
           </a>
         </li>
         <span class="element_bg"></span>
-        <li>
+        <li data-aos="fade-down" data-aos-delay="600">
           <a href="contact.html">
             <h3>
               Contact ↗
@@ -55,9 +61,6 @@
 <main>
   <!-- hero section -->
   <section class="hero">
-    <!-- <div class="asterisque">
-      <img loading="lazy" src="./shared/asterisque.svg" alt="">
-    </div> -->
     <div class="hero_part">
       <!-- year -->
       <aside class="hero_year">
@@ -220,12 +223,10 @@
 
 </footer>
 
-  <!-- gsap -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollSmoother.min.js"></script>
   <!-- script -->
-  <script src="./js/gsap.js"></script>
+   <!-- gsap -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+   <script src="./js/script.js"></script>
   <!-- aos -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
