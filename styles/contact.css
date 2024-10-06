@@ -1,18 +1,16 @@
 .contact {
   width: 100vw;
-  padding: 1rem .5rem .2rem .5rem;
+  padding: 0 .5rem 0 .5rem;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-top: 3rem;
-  position: relative;
+  margin-top: clamp(1rem, 0.8rem + 1vw, 2rem);
 }
 
 .contact_main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .contact_title h1 {
@@ -21,7 +19,7 @@
   flex-direction: column;
   text-transform: uppercase;
   justify-content: space-between;
-  gap: clamp(1rem, 0.2rem + 4vw, 5rem);
+  gap: clamp(1rem, 0.8rem + 1vw, 2rem);
 }
 
 .contact_title span {
@@ -36,77 +34,115 @@
   font-style: italic;
   animation: ScaleBottom 1s .3s ease;
   color: var(--Black);
-  background-color: var(--Gray);
+  background-color: var(--White);
   padding: 1rem 1rem 0 0;
   width: max-content;
   border-radius: 5px;
 }
 
-/* contact datas */
-.contact_element {
-  display: flex;
-  flex-direction: column;
-}
-
+/* contact text */
 .contact_text {
-  font-size: clamp(0.9rem, 0.68rem + 1.1vw, 2rem);
-  max-width: clamp(15.625rem, 9.75rem + 29.375vw, 45rem);
-  text-transform: uppercase;
-  animation: ScaleBottom 1s .2s ease;
-  text-align: justify;
-  padding-bottom: 12px;
-}
-
-.contact_social ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  text-transform: uppercase;
+  max-width: 550px;
+  text-align: justify;
 }
 
-.contact_social h3,
-.contact_social a {
+.text_introduce h2 {
+  font-size: clamp(0.9rem, 0.68rem + 1.1vw, 2rem);
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.text_introduce p:nth-child(1) span:nth-child(3) {
+  text-decoration: none;
+}
+
+.text_introduce img {
+  width: clamp(3.125rem, 2.75rem + 1.875vw, 5rem);
+  height: clamp(0.625rem, 0.4375rem + 0.9375vw, 1.5625rem);
+  object-fit: cover;
+  border-radius: clamp(0.3125rem, -0.25rem + 2.8125vw, 3.125rem);
+}
+
+.contact_text svg {
+  width: clamp(0.8125rem, 0.6875rem + 0.625vw, 1.4375rem);
+}
+
+/* contact links */
+.contact_links ul {
+  display: flex;
+  gap: 10px;
+  padding: 15px 0;
+}
+
+.links_social li {
+  display: flex;
+  border: 1px solid var(--Gray);
+  padding: .6rem 1.5rem .4rem 1.5rem;
+  border-radius: 5px;
+  transition: all .5s ease;
   display: flex;
   align-items: center;
-  font-size: clamp(0.9rem, 0.86rem + 0.2vw, 1.1rem);
-  animation: ScaleBottom 1s .2s ease;
-  letter-spacing: 1.5px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.links_social a {
   transition: all .5s ease;
   font-family: 'Saudagar';
+  text-transform: uppercase;
 }
 
-.contact_social h3 svg {
+.links_social li svg {
   width: 15px;
-  display: flex;
-  align-items: center;
-  margin-right: 3px;
+  margin-right: 8px;
+  margin-top: -4px;
+  transition: all .5s ease;
   transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.contact_social h3 span {
+.links_social li:hover svg {
+  transform: translateX(1px) rotate(-45deg);
+}
+
+.links_social li span {
   transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-  margin-top: 4px;
 }
 
-.contact_social h3:hover svg {
-  transform: translateX(5px) rotate(-45deg);
-}
-
-.contact_social h3:hover span {
-  transform: translateX(7px);
+.links_social li:hover span {
+  transform: translateX(2px);
 }
 
 /* contact img */
 .contact_img img {
   object-fit: cover;
-  width: clamp(15.625rem, 9.75rem + 29.375vw, 45rem);
-  height: clamp(3.125rem, 2.5rem + 3.125vw, 6.25rem);
+  width: 100%;
+  height: clamp(5rem, 2.25rem + 13.75vw, 18.75rem);
+  border-radius: 0;
+  padding: 1rem 0 .5rem 0;
+}
+
+/* media queries */
+@media screen and (width >= 1440px) { 
+  .contact_main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  .contact_title span:nth-child(3) {
+    padding: 2.5rem 3rem 0 0;
+  }
+  .contact_text {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
 }
 
 /* marquee */
 .double_marquee {
   padding-top: clamp(5rem, 4rem + 5vw, 10rem);
-  padding-bottom: 10rem;
 }
 
 .marquee {
@@ -200,34 +236,10 @@
   }
 }
 
-/* media queries */
-@media screen and (width >= 768px) {
-  .contact_element {
-    display: flex;
-    justify-content: center;
-    padding: 3rem 10rem;
-  }
-  .contact_element ul {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-  }
-}
-
-@media screen and (width >= 1440px) { 
-  .contact_main {
-    display: flex;
-    flex-direction: row;
-  }
-  .contact_title span:nth-child(3) {
-    padding: 2.5rem 3rem 0 0;
-  }
-}
-
 /* gif */
-.contact_gif {
+/* .contact_gif {
   display: flex;
   justify-content: end;
   margin-bottom: 10rem;
   filter: grayscale(.8);
-}
+} */

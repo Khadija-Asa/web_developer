@@ -45,7 +45,6 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
-
 }
 
 .list_element h3:hover {
@@ -168,6 +167,7 @@
 .box_img img {
   width: clamp(12.5rem, 10.625rem + 9.375vw, 21.875rem);
   margin: 2rem;
+  filter: drop-shadow(0 0 10rem var(--Gray));
 }
 
 /* media queries */
@@ -219,24 +219,26 @@
 }
 
 .gallery img {
-  clip-path: inset(0 0 0 0);
-  transition: clip-path 1.5s ease-out;
   object-fit: cover;
+  transition: all .5s ease;
 }
 
-.gallery:hover img {
-  clip-path: inset(0 100% 0 0);
-}
-
-.gallery_list figcaption {
-  font-size: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
-  display: flex;
-}
-
-.gallery_list img:hover {
+.gallery img:hover {
+  transform: translate(20px, 20px);
   filter: grayscale(0);
 }
-  
+
+.gallery figcaption {
+  font-size: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+  display: flex;
+  transition: all .5s ease;
+}
+
+.gallery:hover figcaption {
+  transform: translate(20px, 20px);
+}
+
+/* grid */
 .gallery_img1 { 
   grid-area: 1 / 1 / 2 / 3; 
 }

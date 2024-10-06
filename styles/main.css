@@ -120,7 +120,7 @@ main {
 .highlight {
   font-family: 'Saudagar';
   text-decoration: .1px underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 
 .element_bg {
@@ -140,12 +140,8 @@ main {
   z-index: 99;
 }
 
-/* .first {
-  background: var(--Black);
-} */
-
 .first {
-  background: var(--Purple);
+  background: var(--Gray);
   left: 0%;
 }
 
