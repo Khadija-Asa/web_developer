@@ -148,12 +148,14 @@ main {
   height: 100vh;
   width: 66.6%;
   text-transform: uppercase;
-  flex-wrap: wrap;
   text-align: center;
+  letter-spacing: 1px;
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+  font-weight: 900;
 }
 
 .first {
-  background: var(--Gray);
+  background: var(--White);
   left: 0%;
 }
 

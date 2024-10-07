@@ -2,7 +2,7 @@
 .work_text {
   display: flex;
   justify-content: center;
-  padding-bottom: clamp(5rem, 4rem + 5vw, 10rem);
+  /* padding-bottom: clamp(5rem, 4rem + 5vw, 10rem); */
   flex-direction: column;
   align-items: center;
 }
@@ -37,6 +37,9 @@
 @media screen and (width >= 768px) {
   .work_text p {
     padding: 4.5rem 4rem;
+  }
+  .work_text {
+    padding-bottom: 8rem;
   }
 }
 
