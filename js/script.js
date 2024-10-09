@@ -19,5 +19,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
     delay: 1.2,
     left: "-100%",
     ease: "expo.inOut"
+  }); 
+  gsap.to(".uno", {
+    duration: 1,
+    delay: 1,
+    left: "-100%",
+    ease: "expo.inOut"
   });
- });
+  gsap.to(".dos", {
+    duration: 1,
+    delay: 1.2,
+    left: "-100%",
+    ease: "expo.inOut"
+  }); 
+});
