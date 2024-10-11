@@ -8,27 +8,29 @@ function loadGSAP() {
 // Overlay
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.to(".first", {
-    duration: 1,
-    delay: 1,
+    duration: 3,
+    delay: 0,
     left: "-100%",
     ease: "expo.inOut"
   });
   
   gsap.to(".second", {
-    duration: 1,
-    delay: 1.2,
+    duration: 3,
+    delay: 0.2,
     left: "-100%",
     ease: "expo.inOut"
   }); 
+  
   gsap.to(".uno", {
-    duration: 1,
-    delay: 1,
+    duration: 3,
+    delay: 0,
     left: "-100%",
     ease: "expo.inOut"
   });
+  
   gsap.to(".dos", {
-    duration: 1,
-    delay: 1.2,
+    duration: 3,
+    delay: 0.2,
     left: "-100%",
     ease: "expo.inOut"
   }); 
