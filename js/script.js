@@ -7,31 +7,16 @@ function loadGSAP() {
 
 // Overlay
 document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.to(".first", {
-    duration: 3,
-    delay: 0,
-    left: "-100%",
-    ease: "expo.inOut"
-  });
-  
-  gsap.to(".second", {
-    duration: 3,
-    delay: 0.2,
-    left: "-100%",
-    ease: "expo.inOut"
-  }); 
-  
-  gsap.to(".uno", {
-    duration: 3,
-    delay: 0,
-    left: "-100%",
-    ease: "expo.inOut"
-  });
-  
-  gsap.to(".dos", {
-    duration: 3,
-    delay: 0.2,
-    left: "-100%",
-    ease: "expo.inOut"
-  }); 
+  // gsap.to(".first", {
+  //   duration: 3,
+  //   delay: 0,
+  //   left: "-100%",
+  //   ease: "expo.inOut"
+  // });
+  // gsap.to(".second", {
+  //   duration: 3,
+  //   delay: 0.2,
+  //   left: "-100%",
+  //   ease: "expo.inOut"
+  // });
 });
