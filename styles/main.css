@@ -37,6 +37,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -62,7 +63,6 @@ html, body {
 /* Set core body defaults */
 body {
   background-color: var(--Black);
-  background-image: url("data:image/svg+xml,%3Csvg width='30' height='1' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ae8cfa' fill-opacity='0.5' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   font-family: 'Pergola';
   text-rendering: optimizeSpeed;
   color: var(--White);
@@ -138,21 +138,21 @@ main {
   height: 100%;
   top: 0;
   z-index: 99;
+  text-transform: uppercase;
   font-family: 'Bold';
   letter-spacing: 1px;
   font-size: clamp(0.8rem, -0.04rem + 4.2vw, 5rem);
 }
 
 .first {
-  background: var(--White);
   left: 0;
   color: var(--Black);
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 2%;
   background: var(--White);
   padding-left: 1rem;
+  width: 60%;
 }
 
 .second {
@@ -160,23 +160,39 @@ main {
   align-items: center;
   background: var(--Black);
   left: 60%;
+  width: 40%;
   font-style: italic;
   padding-left: 1rem;
 }
 
 .third {
   display: flex;
-  align-items: center;
   left: 0;
-  font-style: italic;
-  padding-left: 1rem;
-
-  color: red;
-  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
-  font-weight: 900;
+  font-size: clamp(0.6rem, 0.56rem + 0.2vw, 0.8rem);
+  font-weight: 700;
+  color: var(--Black);
+  width: 60%;
   font-family: 'Pergola';
-  display: flex;
-  height: 100vh;
   align-items: flex-end;
   justify-content: center;
+  text-align: center;
+}
+
+/* back to top */
+.back-to-top a {
+  transition: all .2s ease;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.back-to-top a:hover {
+  font-size: 35px;
+}
+
+#btn-back-to-top {
+  bottom: 20px;
+  color: var(--Purple);
+  display: none;
+  position: fixed;
+  right: 30px;
 }

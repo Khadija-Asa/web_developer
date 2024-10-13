@@ -89,7 +89,8 @@
   text-align: justify;
   text-transform: uppercase;
   font-size: clamp(0.8rem, 0.36rem + 2.2vw, 3rem);
-  max-width: 108rem;
+  max-width: 110rem;
+  padding: 0 1rem;
 }
 
 /* media queries */
@@ -304,10 +305,6 @@
   object-fit: contain;
 }
 
-.work_lottie {
-  display: none;
-}
-
 /* media queries */
 @media screen and (width >= 768px) {
   .work_text p {
@@ -315,21 +312,6 @@
   }
   .work_text {
     padding-bottom: 8rem;
-  }
-}
-
-/* lottie */
-@media screen and (width >= 1440px) {
-  .work_lottie {
-    display: flex;
-  }
-  .work_lottie lottie-player {
-    filter: drop-shadow(0 0 .3rem var(--Purple));
-    width: 25rem;
-    height: auto;
-    position: absolute;
-    top: 25rem;
-    margin-left: 5rem;
   }
 }
 
