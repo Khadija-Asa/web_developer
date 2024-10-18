@@ -93,6 +93,11 @@
   padding: 0 1rem;
 }
 
+.grid_text img {
+  width: clamp(0.5rem, 0.225rem + 1.375vw, 1.875rem);
+  object-fit: contain;
+}
+
 /* media queries */
 @media screen and (width >= 768px) {
   .hero_part {
@@ -187,7 +192,7 @@
 
 @media screen and (width >= 1440px) {
   .hero_title {
-    padding: 12rem 0 12rem 0;
+    padding: 20rem 0 20rem 0;
   }
   .box_img img {
     margin: 0 5rem 0 5rem;
@@ -288,7 +293,7 @@
   text-transform: uppercase;
   text-align: justify;
   max-width: 70rem;
-  margin: 4rem 1rem 0 1rem;
+  margin: 5rem 1rem 0 1rem;
   font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
   line-height: clamp(1.25rem, 0.9375rem + 1.5625vw, 2.8125rem);
 }
@@ -581,6 +586,7 @@ li:hover .tooltip_image img {
 
 /* contact links */
 .contact_links ul {
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
   display: flex;
   gap: 10px;
   padding: 15px 0;
@@ -650,11 +656,12 @@ li:hover .tooltip_image img {
   padding: 0 1rem;
   display: flex;
   justify-content: end;
-  margin-bottom: clamp(8rem, 6.6rem + 7vw, 15rem);
+  margin-top: 10rem;
 }
 
 /* marquee */
 .double_marquee {
+  padding-top: clamp(8rem, 6.6rem + 7vw, 15rem);
   padding-bottom: clamp(1rem, 0.2rem + 4vw, 5rem);
 }
 
@@ -759,7 +766,7 @@ footer {
   font-family: 'Pergola';
   width: 100vw;
   background-color: var(--Black);
-  margin-top: 5rem;
+  margin-top: 1rem;
   z-index: -99;
 }
 
@@ -808,10 +815,11 @@ footer {
   transition: all .5s ease;
   width: 100px;
   text-transform: capitalize;
+  padding: 1.5px 0;
 }
 
 .footer_button a:hover {
-  transform: translate(0, -2px);
+  transform: translate(0, -2px) !important;
 }
 
 /* bottom */

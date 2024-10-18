@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
   gsap.to(".third", {
     duration: 2.5,
-    delay: 0,
+    delay: 0, 
     left: "-100%",
     ease: "expo.inOut"
   });
