@@ -185,10 +185,6 @@ main {
   cursor: pointer;
 }
 
-/* .back-to-top a:hover {
-  height: 55px;
-} */
-
 #btn-back-to-top {
   bottom: 20px;
   color: var(--Purple);
