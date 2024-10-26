@@ -113,9 +113,9 @@ select {
 }
 
 /* common css */
-main {
+/* main {
   padding-top: 50px !important;
-}
+} */
 
 .highlight {
   font-family: 'Saudagar';
