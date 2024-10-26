@@ -123,12 +123,27 @@ select {
   text-underline-offset: 3px;
 }
 
-.element_bg {
+/* .element_bg {
   border: 30px solid var(--Gray);
   filter: blur(70px);
   position: absolute;
-  width: 13rem;
+  width: 10rem;
   z-index: -99;
+} */
+
+.blink {
+  animation: blink 1.3s infinite;
+}
+@keyframes blink { 
+  0% { 
+    opacity:0; 
+  }
+  50% { 
+    opacity:1; 
+  } 
+  100% { 
+    opacity:0; 
+  }
 }
 
 /* overlay */
