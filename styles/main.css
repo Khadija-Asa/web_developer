@@ -112,28 +112,10 @@ select {
 	}
 }
 
-/* common css */
-/* main {
-  padding-top: 50px !important;
-} */
-
-.highlight {
-  font-family: 'Saudagar';
-  text-decoration: .1px underline;
-  text-underline-offset: 3px;
-}
-
-/* .element_bg {
-  border: 30px solid var(--Gray);
-  filter: blur(70px);
-  position: absolute;
-  width: 10rem;
-  z-index: -99;
-} */
-
 .blink {
   animation: blink 1.3s infinite;
 }
+
 @keyframes blink { 
   0% { 
     opacity:0; 
@@ -144,6 +126,21 @@ select {
   100% { 
     opacity:0; 
   }
+}
+
+/* common css */
+.highlight {
+  font-family: 'Saudagar';
+  text-decoration: .1px underline;
+  text-underline-offset: 3px;
+}
+
+.element_bg {
+  border: 30px solid var(--Gray);
+  filter: blur(70px);
+  position: absolute;
+  width: 10rem;
+  z-index: -99;
 }
 
 /* overlay */
