@@ -192,14 +192,16 @@
   width: clamp(0.8125rem, 0.6875rem + 0.625vw, 1.4375rem);
 }
 
+/* title img */
 .title_box {
-  padding: 8rem 1rem 5rem 1rem;
+  padding: 0 1rem;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: clamp(1.2rem, 0.64rem + 2.8vw, 4rem);
+  font-size: clamp(1.2rem, 1.14rem + 0.3vw, 1.5rem);
   text-align: center;
+  align-items: center;
 }
 
 .title_box span {
@@ -210,10 +212,18 @@
   font-family: 'Pergola';
 }
 
+.box_img {
+  padding: 2rem;
+}
+
 .box_img img {
   width: clamp(12.5rem, 10.625rem + 9.375vw, 21.875rem);
-  margin: 2rem;
-  filter: drop-shadow(0 0 10rem var(--Gray));
+  filter: drop-shadow(0 0 15rem var(--Gray));
+}
+
+.box_name,
+.box_text {
+  width: 530px;
 }
 
 /* media queries */
@@ -222,6 +232,7 @@
     flex-direction: row;
     justify-content: center;
     text-align: start;
+    font-size: clamp(1.3rem, 0.96rem + 1.7vw, 3rem);
   }
   .box_name {
     display: flex;
@@ -238,6 +249,7 @@
     margin: 0 5rem 0 5rem;
   }
 }
+
 
 /* grid gallery */
 .grid_gallery { 
@@ -270,7 +282,6 @@
 }
 
 .gallery img:hover {
-  transform: translate(20px, 20px);
   filter: grayscale(0);
 }
 
