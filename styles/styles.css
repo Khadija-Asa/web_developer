@@ -192,65 +192,6 @@
   width: clamp(0.8125rem, 0.6875rem + 0.625vw, 1.4375rem);
 }
 
-/* title img */
-.title_box {
-  padding: 0 1rem;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: clamp(1.2rem, 1.14rem + 0.3vw, 1.5rem);
-  text-align: center;
-  align-items: center;
-}
-
-.title_box span {
-  text-decoration: none !important;
-}
-
-.title_box p {
-  font-family: 'Pergola';
-}
-
-.box_img {
-  padding: 2rem;
-}
-
-.box_img img {
-  width: clamp(12.5rem, 10.625rem + 9.375vw, 21.875rem);
-  filter: drop-shadow(0 0 15rem var(--Gray));
-}
-
-.box_name,
-.box_text {
-  width: 530px;
-}
-
-/* media queries */
-@media screen and (width >= 768px) {
-  .title_box {
-    flex-direction: row;
-    justify-content: center;
-    text-align: start;
-    font-size: clamp(1.3rem, 0.96rem + 1.7vw, 3rem);
-  }
-  .box_name {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media screen and (width >= 1440px) {
-  .banner_title {
-    padding-bottom: 20rem;
-  }
-  .box_img img {
-    margin: 0 5rem 0 5rem;
-  }
-}
-
-
 /* grid gallery */
 .grid_gallery {
   display: grid;
@@ -280,6 +221,7 @@
   border-top: 1px solid rgba(180, 180, 180, .3);
   display: flex;
   width: 100%;
+  gap: 1rem;
 }
 
 .box_title {
@@ -310,12 +252,25 @@
   color: var(--Purple);
 }
 
+.box_title h5 p {
+  transform: rotate(180deg);
+  filter: grayscale(1);
+  opacity: .2;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.box_title h5 p svg {
+  width: 25px;
+}
+
 .box_title p {
   font-family: 'Pergola';
   font-size: 1rem;
   text-transform: lowercase;
   font-weight: 100;
-  height: 30rem;
+  height: 20rem;
 }
 
 .gallery_img {
@@ -328,19 +283,19 @@
 }
 
 .gallery1 {
-  background-image: url(./../shared/dirham.jpg);
-}
-
-.gallery2 {
-  background-image: url(./../shared/cityscape_paris.jpg);
-}
-
-.gallery3 {
   background-image: url(./../shared/oriental-market.jpg);
 }
 
-.gallery4 {
+.gallery2 {
+  background-image: url(./../shared/pantheon.jpg);
+}
+
+.gallery3 {
   background-image: url(./../shared/tajine.jpg);
+}
+
+.gallery4 {
+  background-image: url(./../shared/cityscape_paris.jpg);
 }
 
 
