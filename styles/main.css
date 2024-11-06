@@ -209,3 +209,12 @@ select {
   color: var(--Gray);
   bottom: 22px;
 }
+
+/* mouse */
+#magicPointer {
+  background-color: var(--Purple) !important;
+}
+
+#magicMouseCursor {
+  border: 1.5px solid var(--White) !important;
+}
