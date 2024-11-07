@@ -74,7 +74,7 @@
 .hero_title h1 span:nth-child(1) {
   color: var(--Black);
   -webkit-text-stroke-width: clamp(0.03125rem, 0.0125rem + 0.0938vw, 0.125rem);;
-  -webkit-text-stroke-color: var(--White);
+  -webkit-text-stroke-color: var(--Gray);
 }
 
 .hero_text { 
@@ -518,7 +518,7 @@ li:hover .tooltip_image img {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .contact_main h5 {
@@ -526,6 +526,13 @@ li:hover .tooltip_image img {
   font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
   font-style: italic;
   padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact_social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact_social ul {
@@ -534,14 +541,13 @@ li:hover .tooltip_image img {
 
 .contact_social h6 {
   margin-bottom: .3rem;
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
   font-weight: 900;
 }
 
-.contact_social a,
-.contact_social p {
-  text-transform: lowercase;
+.contact_social a {
   transition: all .5s ease;
+  letter-spacing: 1px;
 }
 
 .contact_social a:hover {
@@ -561,19 +567,15 @@ li:hover .tooltip_image img {
   gap: 1rem;
 }
 
-.contact_img p {
-  color: var(--White);
-  font-weight: 900;
-  background-color: var(--Black);
-  border: 1px solid white;
+.contact_info p {
+  color: var(--Black);
+  background-color: var(--Gray);
   margin-bottom: 10px;
   padding: 1rem;
   width: 120px;
   text-align: center;
-}
-
-.contact_ {
-  /* chiffre */
+  border-radius: 2px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .contact_img img {
@@ -591,7 +593,10 @@ li:hover .tooltip_image img {
 
 .social_links li {
   transition: all .5s ease;
-  width: 25px;
+  width: clamp(1.5625rem, 1.5rem + 0.3125vw, 1.875rem);
+  margin-top: clamp(1rem, 0.6rem + 2vw, 3rem);
+  filter: drop-shadow(0 0 2rem var(--Gray));
+
 }
 
 .social_links li:hover {
@@ -599,20 +604,21 @@ li:hover .tooltip_image img {
 }
 
 /* media queries */
-@media screen and (width >=490px) {
+@media screen and (width >=1024px) {
   .contact_main {
     flex-direction: row;
     justify-content: space-between;
-    flex-grow: 1;
   }
   .contact_img img {
-    max-width: 900px;
+    max-width: clamp(34.375rem, 30rem + 21.875vw, 56.25rem);
     height: 100%;
-    flex: 1;
   }
   .contact_social ul {
     display: flex;
-    gap: 15px;
+    gap: 30px;
+  }
+  .contact_info {
+    gap: 30px;
   }
 }
 
