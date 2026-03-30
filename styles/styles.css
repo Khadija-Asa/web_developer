@@ -71,12 +71,6 @@
   line-height: clamp(3rem, 1.6rem + 7vw, 10rem);
 }
 
-.hero_title h1 span:nth-child(1) {
-  color: var(--Black);
-  -webkit-text-stroke-width: clamp(0.03125rem, 0.0125rem + 0.0938vw, 0.125rem);;
-  -webkit-text-stroke-color: var(--Gray);
-}
-
 .hero_text { 
   text-align: justify;
   text-transform: uppercase;
