@@ -51,75 +51,96 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-// form contact
+// Form contact
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 const toast = document.getElementById('toast');
- 
+
+// show toast message
 function showToast(msg) {
   toast.textContent = msg;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 5000);
 }
- 
+
+// validate a field
 function validate(id, condition) {
   const field = document.getElementById('field-' + id);
   if (!condition) { field.classList.add('invalid'); return false; }
   field.classList.remove('invalid');
   return true;
 }
- 
+
+// check email format
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
- 
+
+// validate text fields on blur
 ['name', 'subject', 'message'].forEach(id => {
   document.getElementById(id).addEventListener('blur', () => {
     validate(id, document.getElementById(id).value.trim() !== '');
   });
 });
- 
+
+// validate email on blur
 document.getElementById('email').addEventListener('blur', () => {
   validate('email', isValidEmail(document.getElementById('email').value.trim()));
 });
- 
+
+// validate RGPD on change
+document.getElementById('gdpr').addEventListener('change', () => {
+  validate('gdpr', document.getElementById('gdpr').checked);
+});
+
+// handle form submission
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  // Get field values
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const subject = document.getElementById('subject').value.trim();
   const message = document.getElementById('message').value.trim();
- 
+  const gdpr = document.getElementById('gdpr').checked;
+
+  // run all validations
   const valid = [
     validate('name', name !== ''),
     validate('email', isValidEmail(email)),
     validate('subject', subject !== ''),
     validate('message', message !== ''),
+    validate('gdpr', gdpr),
   ].every(Boolean);
- 
+
+  // stop if invalid
   if (!valid) return;
- 
+
+  // disable button while sending
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending';
- 
+
   try {
+    // send to Formspree
     const res = await fetch('https://formspree.io/f/xgopkelr', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ name, email, subject, message })
     });
- 
+
+    // handle response
     if (res.ok) {
       form.reset();
-        showToast('Message sent successfully !');
-      } else {
-        showToast('❌ Something went wrong, please try again.');
-      }
-    } catch {
-      showToast('❌ Connection error, please try again.');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send';
+      showToast('Message sent successfully !');
+    } else {
+      showToast('❌ Something went wrong, please try again.');
     }
-  });
+  } catch {
+    // handle network error
+    showToast('❌ Connection error, please try again.');
+  } finally {
+    // re-enable submit button
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send';
+  }
+});

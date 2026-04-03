@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khadidja-dev.fr/sitemap.xml

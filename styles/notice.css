@@ -1,0 +1,150 @@
+:root {
+  --Black: #000;
+  --Purple: #AE8CFA;
+  --White: #FEFCFF;
+  --Gray: #d1d1d1;
+}
+/* bold font */
+@font-face {
+  font-family: 'Bold';
+  src: url(./../fonts/the_bold_font/THE\ BOLD\ FONT\ -\ FREE\ VERSION\ -\ 2023.otf);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--Black);
+  color: var(--Gray);
+  font-family: 'Bold';
+  line-height: 1.8;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 2px solid var(--White);
+  padding-bottom: 32px;
+  margin-bottom: 56px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--Purple);
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--White);
+  letter-spacing: -0.02em;
+}
+
+.updated {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--Gray);
+  opacity: 0.6;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--White);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--Purple);
+}
+
+p {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.card {
+  background: #0d0d0d;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-top: 8px;
+}
+
+.card p {
+  margin-bottom: 6px;
+}
+
+.card strong {
+  color: var(--White);
+  font-weight: 600;
+}
+
+ul {
+  margin: 0 0 12px 24px;
+  font-size: 15px;
+}
+
+ul li::marker {
+  color: var(--Purple);
+}
+
+a {
+  color: var(--Purple);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.field {
+  display: inline-block;
+  background: rgba(174, 140, 250, 0.1);
+  border: 1px solid var(--Purple);
+  border-radius: 2px;
+  padding: 3px 10px 0px 10px;
+  font-size: 13px;
+  color: var(--Purple);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid #2a2a2a;
+  font-size: 12px;
+  color: var(--Gray);
+  opacity: 0.5;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 32px 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 16px 18px;
+  }
+}

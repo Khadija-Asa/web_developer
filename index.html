@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Khadidja A. — Développeur Frontend</title>
+  <meta name="description" content="Khadidja A. développeur frontend spécialisée dans la création d'interfaces modernes, accessibles et performantes. Disponible pour des projets freelance.">
+  <meta name="keywords" content="développeuse web, développeur frontend, freelance, HTML CSS JavaScript, création site web, intégration web, React, développeur web France">
   <meta name="author" content="Khadidja Ait Si Ali">
-  <meta name="theme-color" content="#FEFCFF">
-  <meta name="keywords" content="developer, website, coder, frontend, développeur web">
   <meta name="robots" content="index, follow">
-  <meta name="description" content="Web developer, développeur web">
-  <title>Web developer — Khadidja A.</title>
+  <link rel="canonical" href="https://khadidja-dev.fr/">
 
-  <!-- Icons -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Khadidja Ait Si Ali — Développeur Frontend">
+  <meta property="og:description" content="Développeuse web frontend spécialisée dans la création d'interfaces modernes, accessibles et performantes.">
+  <meta property="og:url" content="https://khadidja-dev.fr/">
+  <meta property="og:image" content="https://votresite.com/shared/og-image.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Icônes & thème -->
   <link rel="shortcut icon" href="./shared/logo.svg" type="image/x-icon">
+  <link rel="icon" href="./shared/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#FEFCFF">
 
-  <!-- styles -->
+  <!-- Styles -->
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
@@ -534,8 +544,21 @@
             <textarea id="message" name="message" placeholder="What can I do for you ?"></textarea>
             <span class="error-msg">Please write your message.</span>
           </div>
+
+          <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="400" data-aos-duration="2100" id="field-gdpr">
+            <div class="field gdpr-field">
+              <input type="checkbox" id="gdpr" name="gdpr"/>
+              <label for="gdpr">
+                I agree that my data may be used to process my request, in accordance
+                with the <a href="/notice.html" target="_blank">privacy policy</a>.
+              </label>
+            </div>
+            <span class="error-msg">
+              Please accept the privacy policy.
+            </span>
+          </div>
       
-        <button data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="400" data-aos-duration="2100" type="submit" class="btn" id="submitBtn">Send</button>
+        <button data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="450" data-aos-duration="2400" type="submit" class="btn" id="submitBtn">Send</button>
 
       </form>
     </div>
@@ -589,7 +612,8 @@
 
       <p class="bottom_title">
         <span>© All rights reserved</span>
-        <span>Khadidja A. 2024</span>
+        <span><a href="notice.html">Legal Notice</a></span>
+        <span>Khadidja A. 2026</span>
       </p>
 
     </div>
@@ -597,7 +621,7 @@
 </footer>
 
   <!-- script -->
-   <!-- gsap -->
+  <!-- gsap -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="./js/script.js"></script>
   <!-- aos -->

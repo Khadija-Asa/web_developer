@@ -566,6 +566,7 @@ textarea {
   min-height: 120px; 
 }
  
+/* error */
 .error-msg {
   font-size: 0.78rem;
   color: #f87171;
@@ -581,7 +582,50 @@ textarea {
 .field.invalid .error-msg { 
   display: block; 
 }
- 
+
+/* gdpr */
+.gdpr-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gdpr-field input[type="checkbox"] {
+  cursor: pointer;
+  width: 1px;
+  height: 1px;
+  border: 1px solid var(--Purple);
+  background-color: var(--Gray);
+  transition: all 0.2s ease;
+}
+
+.gdpr-field input[type="checkbox"]:checked {
+  background-color: var(--Purple);
+}
+
+.gdpr-field label {
+  color: var(--White);
+  font-size: clamp(0.6rem, 0.5714rem + 0.1429vw, 0.7rem);
+  line-height: 1.6;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.gdpr-field a {
+  color: var(--Purple) !important;
+  text-decoration: underline;
+}
+
+#field-gdpr .error-msg {
+  display: none;
+  margin-top: 6px;
+}
+
+#field-gdpr.invalid .error-msg {
+  display: block;
+}
+
+/* submit btn */
 .btn {
   width: 100%;
   margin-top: 0.5rem;
@@ -601,6 +645,7 @@ textarea {
 .btn:active { transform: scale(0.99); }
 .btn:disabled { opacity: 0.4; }
  
+/* toast */
 .toast {
   position: fixed;
   bottom: 2rem;
