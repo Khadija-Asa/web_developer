@@ -22,9 +22,11 @@
   <!-- Icônes & thème -->
   <link rel="shortcut icon" href="./shared/logo.svg" type="image/x-icon">
   <link rel="icon" href="./shared/logo.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#FEFCFF">
+  <meta name="theme-color" content="#000000">
 
   <!-- Styles -->
+  <link rel="preload" href="./fonts/the_bold_font/the-bold-font.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/pergola/pergola.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css">
@@ -48,7 +50,7 @@
   <header class="menu">
 
     <a data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="700" href="index.html" class="menu_brand">
-      <img loading="lazy" src="./shared/logo.svg" alt="Khadidja A. – Home">
+      <img src="./shared/logo.svg" alt="Khadidja A. – Home">
     </a>
 
     <nav class="menu_list">
@@ -84,13 +86,13 @@
         <span data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="1350">web developer</span>
       </h1>
       <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="1450" class="hero_text">
-        <img loading="lazy" src="./shared/abstract_paint.jpg" alt=""> <br>
+        <img src="./shared/abstract_paint.webp" alt=""> <br>
         Passionate about web development
-        <img loading="lazy" src="./shared/asterisque.svg" alt="">
+        <img src="./shared/asterisque.svg" alt="">
         Specialized in creating <span class="highlight">responsive</span>, <span class="highlight">user-friendly</span> web apps
-        <img loading="lazy" src="./shared/asterisque.svg" alt="">
+        <img src="./shared/asterisque.svg" alt="">
         My expertise extends to modern frameworks
-        <img loading="lazy" src="./shared/asterisque.svg" alt="">
+        <img src="./shared/asterisque.svg" alt="">
         Looking forward to collaborating on <span class="highlight">innovative</span> projects!
       </p>
       <div class="hero_button">
@@ -104,12 +106,12 @@
       <div class="social_media">
         <ul>
           <li data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="1800">
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/khadidja-ait-si-ali/" target="_blank" rel="noopener noreferrer">
+            <a aria-label="LinkedIn (opens in a new tab)" href="https://www.linkedin.com/in/khadidja-ait-si-ali/" target="_blank" rel="noopener noreferrer">
               <svg aria-hidden="true" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g fill="#FEFCFF" class="fill-263238"><path d="M4.983 8.875H4.94C2.657 8.875 1 7.361 1 5.275c0-2.089 1.692-3.606 4.023-3.606 2.292 0 3.928 1.476 3.977 3.589 0 2.101-1.689 3.617-4.017 3.617zm.04-6.206C3.243 2.669 2 3.741 2 5.275c0 1.531 1.209 2.601 2.94 2.601h.043C6.76 7.875 8 6.804 8 5.27c-.037-1.576-1.205-2.601-2.977-2.601zM7.5 29h-5a.5.5 0 0 1-.5-.5v-18a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v18a.5.5 0 0 1-.5.5zM3 28h4V11H3v17zM30.5 29h-6a.5.5 0 0 1-.5-.5V19c0-1.654-1.346-3-3-3s-3 1.346-3 3v9.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5v-18a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v3.014a.5.5 0 0 1-1 0V11h-5v17h5v-9c0-2.206 1.794-4 4-4s4 1.794 4 4v9h5V17.5c0-3.584-2.916-6.5-6.5-6.5a6.949 6.949 0 0 0-3.871 1.173.5.5 0 0 1-.554-.831A7.934 7.934 0 0 1 23.5 10c4.136 0 7.5 3.364 7.5 7.5v11a.5.5 0 0 1-.5.5z"></path></g></svg>
             </a>    
           </li>
           <li data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="1850">
-            <a aria-label="GitHub" href="https://github.com/Khadija-Asa" target="_blank" rel="noopener noreferrer">
+            <a aria-label="GitHub (opens in a new tab)" href="https://github.com/Khadija-Asa" target="_blank" rel="noopener noreferrer">
               <svg aria-hidden="true" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M11.393 30.176a1.47 1.47 0 0 1-.506-.089A14.94 14.94 0 0 1 1.015 15.33a.5.5 0 0 1 .999.043 13.942 13.942 0 0 0 9.214 13.772.485.485 0 0 0 .453-.063.501.501 0 0 0 .217-.417l-.008-1.573c-3.927.561-4.857-2.375-4.867-2.406-.552-1.405-1.342-1.82-1.35-1.824-.342-.229-.996-.676-.81-1.262.167-.528.852-.563 1.136-.572 1.736.122 2.616 1.693 2.652 1.76.956 1.643 2.414 1.446 3.335 1.094.09-.452.239-.863.439-1.216-2.872-.486-6.176-1.973-6.176-7.568 0-1.531.479-2.88 1.424-4.016-.208-.674-.468-2.112.244-3.925a.5.5 0 0 1 .313-.293c.144-.047 1.473-.394 4.23 1.426a14.35 14.35 0 0 1 3.539-.448c1.234.006 2.423.157 3.543.448 2.756-1.82 4.08-1.473 4.226-1.426a.5.5 0 0 1 .312.292c.715 1.813.456 3.251.247 3.927.944 1.133 1.422 2.482 1.422 4.016 0 5.595-3.308 7.078-6.185 7.559.354.623.549 1.426.549 2.32 0 1.013-.005 2.465-.01 3.692a.503.503 0 0 0 .677.475C26.295 27.141 30 21.858 30 16c0-3.863-1.54-7.46-4.335-10.129-2.794-2.667-6.462-4.037-10.336-3.855a.496.496 0 0 1-.523-.476.5.5 0 0 1 .476-.523c4.152-.19 8.08 1.274 11.073 4.131A14.867 14.867 0 0 1 31 16c0 6.277-3.97 11.937-9.878 14.084a1.505 1.505 0 0 1-2.018-1.418c.005-1.226.01-2.676.01-3.688 0-1.459-.567-2.107-.811-2.317a.5.5 0 0 1 .271-.875c3.054-.34 6.176-1.401 6.176-6.686 0-1.38-.458-2.582-1.36-3.569a.5.5 0 0 1-.094-.526c.139-.34.524-1.537-.042-3.198-.423.012-1.503.189-3.34 1.44a.495.495 0 0 1-.416.068 13.516 13.516 0 0 0-3.499-.472 13.242 13.242 0 0 0-3.494.472.493.493 0 0 1-.416-.068c-1.83-1.245-2.91-1.427-3.346-1.438-.563 1.661-.177 2.855-.039 3.196a.5.5 0 0 1-.094.525c-.904.991-1.362 2.192-1.362 3.57 0 5.282 3.115 6.35 6.162 6.697a.499.499 0 0 1 .273.872c-.224.197-.621.672-.756 1.64a.496.496 0 0 1-.29.386c-.75.338-3.316 1.237-4.858-1.413-.011-.019-.525-.921-1.444-1.186.326.218 1.077.852 1.631 2.265.043.133.808 2.409 4.313 1.646a.5.5 0 0 1 .607.485l.011 2.17a1.509 1.509 0 0 1-1.504 1.514z" fill="#FEFCFF" class="fill-263238"></path><path d="M15.737 31C7.474 31 1 24.411 1 16c0-3.629 1.238-7.111 3.485-9.804a.5.5 0 0 1 .768.641C3.155 9.35 2 12.604 2 16c0 7.851 6.034 14 13.737 14C23.602 30 30 23.72 30 16S23.602 2 15.737 2c-2.441 0-4.812.62-6.858 1.792a.501.501 0 0 1-.497-.869C10.579 1.665 13.123 1 15.737 1 24.153 1 31 7.729 31 16s-6.847 15-15.263 15z" fill="#FEFCFF" class="fill-263238"></path><path d="M7.543 4.552c0 .275-.225.5-.5.5a.501.501 0 0 1-.5-.5.5.5 0 0 1 1 0z" fill="#FEFCFF" class="fill-263238"></path></svg>
             </a>    
           </li>
@@ -134,9 +136,9 @@
       </h2>
       <p class="introduce_paragraph">
         — I'm Khadidja Ait Si Ali
-        <img src="./shared/morocco_flag.jpg" alt="Moroccan flag">
+        <img src="./shared/morocco_flag.webp" alt="Moroccan flag">
         I'm a frontend & creative developer based in France
-        <img src="./shared/france_flag.jpg" alt="French flag"> <br>
+        <img src="./shared/france_flag.webp" alt="French flag"> <br>
         I love making the web a bit more beautiful!
         Looking for a top-notch web developer? <br>
         Contact me to discuss your project needs and bring your vision to life. <br>
@@ -254,11 +256,11 @@
   <section class="work_text" id="work">
     <p data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
       intuitive and efficient web experiences are my <span class="highlight">focus</span> 
-      <img loading="lazy" src="./shared/zelij.jpg" alt="">
+      <img loading="lazy" src="./shared/zelij.webp" alt="">
       Each project is a challenge to <span class="highlight">innovate</span>
       <img loading="lazy" src="./shared/asterisque.svg" alt="">
       ensuring code is         
-      <img loading="lazy" src="./shared/zelij.jpg" alt="">
+      <img loading="lazy" src="./shared/zelij.webp" alt="">
       both efficient and future-ready!
     </p>
   </section>
@@ -411,9 +413,9 @@
           <h3 class="accordion_title">last champion</h3>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/last_champion.png" alt="Mockup Last Champion">
+          <img loading="lazy" src="./shared/last_champion.webp" alt="Mockup Last Champion">
         </div>
-        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="50" class="accordion_git" href="https://github.com/Khadija-Asa/LastChampion">view on github ↗</a>
+        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="50" class="accordion_git" href="https://github.com/Khadija-Asa/LastChampion" rel="noopener noreferrer" target="_blank">view on github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
       </li>
       <li>
         <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="100" class="accordion_element">
@@ -421,9 +423,9 @@
           <h3 class="accordion_title">space tourism</h3>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/space_tourism.png" alt="Mockup Space Tourism">
+          <img loading="lazy" src="./shared/space_tourism.webp" alt="Mockup Space Tourism">
         </div>
-        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="100" class="accordion_git" href="https://github.com/Khadija-Asa/space-tourism">view on github ↗</a>
+        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="100" class="accordion_git" href="https://github.com/Khadija-Asa/space-tourism" rel="noopener noreferrer" target="_blank">view on github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
       </li>
       <li>
         <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="150" class="accordion_element">
@@ -431,9 +433,9 @@
           <h3 class="accordion_title">numériqu'elles</h3>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/numeriquelles.png" alt="Mockup Numériqu'Elles">
+          <img loading="lazy" src="./shared/numeriquelles.webp" alt="Mockup Numériqu'Elles">
         </div>
-        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="150" class="accordion_git" href="https://github.com/Khadija-Asa/numeriqu-elles">view on github ↗</a>
+        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="150" class="accordion_git" href="https://github.com/Khadija-Asa/numeriqu-elles" rel="noopener noreferrer" target="_blank">view on github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
       </li>
       <li>
         <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="200" class="accordion_element">
@@ -441,9 +443,9 @@
           <h3 class="accordion_title">levyna</h3>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/levyna.png" alt="Mockup Levyna">
+          <img loading="lazy" src="./shared/levyna.webp" alt="Mockup Levyna">
         </div>
-        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="200" class="accordion_git" href="https://github.com/Khadija-Asa/levyna" rel="noopener noreferrer" target="_blank">view on github ↗</a>
+        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="200" class="accordion_git" href="https://github.com/Khadija-Asa/levyna" rel="noopener noreferrer" target="_blank">view on github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
       </li>
       <li>
         <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="250" class="accordion_element">
@@ -451,9 +453,9 @@
           <h3 class="accordion_title">moon crypto</h3>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/moon.png" alt="Mockup Moon Crypto">
+          <img loading="lazy" src="./shared/moon.webp" alt="Mockup Moon Crypto">
         </div>
-        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="250" class="accordion_git" href="https://github.com/Khadija-Asa/moon_crypto" rel="noopener noreferrer" target="_blank">view on github ↗</a>
+        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="250" class="accordion_git" href="https://github.com/Khadija-Asa/moon_crypto" rel="noopener noreferrer" target="_blank">view on github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
       </li>
       <li>
         <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="300" class="accordion_element">
@@ -461,9 +463,9 @@
           <h3 class="accordion_title">nft equilibrium</h3>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/nft.png" alt="Mockup Nft Equilibrium">
+          <img loading="lazy" src="./shared/nft.webp" alt="Mockup Nft Equilibrium">
         </div>
-        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="300" class="accordion_git" href="https://github.com/Khadija-Asa/nft-card" rel="noopener noreferrer" target="_blank">view on github ↗</a>
+        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="300" class="accordion_git" href="https://github.com/Khadija-Asa/nft-card" rel="noopener noreferrer" target="_blank">view on github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
       </li>
       <li>
         <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="350" class="accordion_element">
@@ -471,9 +473,9 @@
           <h3 class="accordion_title">portfolio</h3> 
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/portfolio.png" alt="Mockup Portfolio">
+          <img loading="lazy" src="./shared/portfolio.webp" alt="Mockup Portfolio">
         </div>
-        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="300" class="accordion_git" href="https://github.com/Khadija-Asa/personal-website" rel="noopener noreferrer" target="_blank">view on github ↗</a>
+        <a data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="300" class="accordion_git" href="https://github.com/Khadija-Asa/personal-website" rel="noopener noreferrer" target="_blank">view on github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
       </li>
     </ul>
   </section>
@@ -521,42 +523,44 @@
     <div class="form_wrapper">
       <form id="contactForm" novalidate>
 
+          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+
           <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="200" data-aos-duration="900" class="field" id="field-name">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name"/>
-            <span class="error-msg">Please enter your name.</span>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" aria-describedby="name-error"/>
+            <span class="error-msg" id="name-error">Please enter your name.</span>
           </div>
           <br>
     
           <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="250" data-aos-duration="1200" class="field" id="field-email">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@gmail.com" autocomplete="email"/>
-            <span class="error-msg">Please enter a valid email address.</span>
+            <input type="email" id="email" name="email" placeholder="you@gmail.com" autocomplete="email" aria-describedby="email-error"/>
+            <span class="error-msg" id="email-error">Please enter a valid email address.</span>
           </div>
           <br>
 
           <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="300" data-aos-duration="1500" class="field" id="field-subject">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What's the subject ?"/>
-            <span class="error-msg">Please enter a subject.</span>
+            <input type="text" id="subject" name="subject" placeholder="What's the subject ?" aria-describedby="subject-error"/>
+            <span class="error-msg" id="subject-error">Please enter a subject.</span>
           </div>
           <br>
       
           <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="350" data-aos-duration="1800" class="field" id="field-message">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="What can I do for you ?"></textarea>
-            <span class="error-msg">Please write your message.</span>
+            <textarea id="message" name="message" placeholder="What can I do for you ?" aria-describedby="message-error"></textarea>
+            <span class="error-msg" id="message-error">Please write your message.</span>
           </div>
 
           <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="400" data-aos-duration="2100" id="field-gdpr">
             <div class="field gdpr-field">
-              <input type="checkbox" id="gdpr" name="gdpr"/>
+              <input type="checkbox" id="gdpr" name="gdpr" aria-describedby="gdpr-error"/>
               <label for="gdpr">
                 I agree that my data may be used to process my request, in accordance
-                with the <a href="/notice.html" target="_blank">privacy policy</a>.
+                with the <a href="notice.html" target="_blank">privacy policy<span class="sr_only"> (opens in a new tab)</span></a>.
               </label>
             </div>
-            <span class="error-msg">
+            <span class="error-msg" id="gdpr-error">
               Please accept the privacy policy.
             </span>
           </div>
@@ -566,7 +570,7 @@
       </form>
     </div>
     
-    <div class="toast" id="toast"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   </section>
 
@@ -599,14 +603,14 @@
     <div class="footer_button">
 
       <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200" href="https://www.linkedin.com/in/khadidja-ait-si-ali/" target="_blank" rel="noopener noreferrer">
-        Linkedin ↗
+        Linkedin <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span>
       </a>
       <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="250" href="https://github.com/Khadija-Asa" target="_blank" rel="noopener noreferrer">
-        Github ↗
+        Github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span>
       </a>
       <span class="element_bg"></span>
-      <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300" href="mailto:khadidja.aitsiali@gmail.com" target="_blank" rel="noopener noreferrer">
-        Email ↗
+      <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300" href="mailto:khadidja.aitsiali@gmail.com">
+        Email <span aria-hidden="true">↗</span>
       </a>
 
     </div>

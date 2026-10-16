@@ -54,6 +54,7 @@ function showToast(msg) {
 // validate a field
 function validate(id, condition) {
   const field = document.getElementById('field-' + id);
+  document.getElementById(id).setAttribute('aria-invalid', String(!condition));
   if (!condition) { field.classList.add('invalid'); return false; }
   field.classList.remove('invalid');
   return true;
@@ -91,6 +92,7 @@ form.addEventListener('submit', async (e) => {
   const subject = document.getElementById('subject').value.trim();
   const message = document.getElementById('message').value.trim();
   const gdpr = document.getElementById('gdpr').checked;
+  const _gotcha = form.elements._gotcha.value;
 
   // run all validations
   const valid = [
@@ -113,7 +115,7 @@ form.addEventListener('submit', async (e) => {
     const res = await fetch('https://formspree.io/f/xgopkelr', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ name, email, subject, message })
+      body: JSON.stringify({ name, email, subject, message, _gotcha })
     });
 
     // handle response

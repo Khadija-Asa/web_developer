@@ -9,25 +9,29 @@
 /* main font */
 @font-face {
   font-family: 'Pergola';
-  src: url(./../fonts/pergola/Pergola-Demo.otf);
+  src: url(./../fonts/pergola/pergola.woff2) format('woff2');
+  font-display: swap;
 }
 
 /* second font */
 @font-face {
   font-family: 'Saudagar';
-  src: url(./../fonts/saudagar/Saudagar.ttf);
+  src: url(./../fonts/saudagar/saudagar.woff2) format('woff2');
+  font-display: swap;
 }
 
 /* bold font */
 @font-face {
   font-family: 'Bold';
-  src: url(./../fonts/the_bold_font/THE\ BOLD\ FONT\ -\ FREE\ VERSION\ -\ 2023.otf);
+  src: url(./../fonts/the_bold_font/the-bold-font.woff2) format('woff2');
+  font-display: swap;
 }
 
 /* numbers */
 @font-face {
   font-family: 'Aceh';
-  src: url(./../fonts/aceh_darusalam/Aceh\ Darusalam.ttf);
+  src: url(./../fonts/aceh_darusalam/aceh-darusalam.woff2) format('woff2');
+  font-display: swap;
 }
  
 /* Box sizing rules */
@@ -95,6 +99,22 @@ select {
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--Gray) var(--Black);
+}
+
+.sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.honeypot {
+  display: none;
 }
 
 a:focus-visible,

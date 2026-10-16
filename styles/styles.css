@@ -282,19 +282,19 @@
 }
 
 .gallery1 {
-  background-image: url(./../shared/oriental-market.jpg);
+  background-image: url(./../shared/oriental-market.webp);
 }
 
 .gallery2 {
-  background-image: url(./../shared/pantheon.jpg);
+  background-image: url(./../shared/pantheon.webp);
 }
 
 .gallery3 {
-  background-image: url(./../shared/tajine.jpg);
+  background-image: url(./../shared/tajine.webp);
 }
 
 .gallery4 {
-  background-image: url(./../shared/cityscape_paris.jpg);
+  background-image: url(./../shared/cityscape_paris.webp);
 }
 
 
@@ -369,7 +369,6 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  cursor: pointer;
 }
 
 .skills li svg {
