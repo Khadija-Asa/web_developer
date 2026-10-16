@@ -274,6 +274,14 @@ function marqueeAnimation() {
 }
 
 function contactAnimation() {
+  gsap.from(".contact_details li", {
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.12,
+    ease: "power3.out",
+    scrollTrigger: { trigger: ".contact_details", start: "top 90%" }
+  });
   const items = gsap.utils.toArray(".form_wrapper .field:not(.gdpr-field), #field-gdpr, #submitBtn");
   gsap.from(items, {
     y: 40,
@@ -424,7 +432,7 @@ form.addEventListener('submit', async (e) => {
 
   // disable button while sending
   submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending';
+  submitBtn.textContent = 'Sending…';
 
   try {
     // send to Formspree
@@ -447,7 +455,7 @@ form.addEventListener('submit', async (e) => {
   } finally {
     // re-enable submit button
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Send';
+    submitBtn.textContent = 'Send message';
   }
 });
 

@@ -429,7 +429,7 @@
           </div>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/observatoire.webp" alt="Preview of L'Observatoire">
+          <img loading="lazy" src="./shared/observatoire.webp" width="1000" height="625" alt="Preview of L'Observatoire">
         </div>
         <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://observatoire-weld.vercel.app/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
@@ -445,7 +445,7 @@
           </div>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/lacet_fluffy.webp" alt="Preview of Lacet Fluffy">
+          <img loading="lazy" src="./shared/lacet_fluffy.webp" width="1000" height="625" alt="Preview of Lacet Fluffy">
         </div>
         <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://fluffy-laces.vercel.app/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
@@ -461,7 +461,7 @@
           </div>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/last_champion.webp" alt="Preview of Last Champion">
+          <img loading="lazy" src="./shared/last_champion.webp" width="1000" height="625" alt="Preview of Last Champion">
         </div>
         <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://www.lastchampion.fr/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
@@ -478,7 +478,7 @@
           </div>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/asalab.webp" alt="Preview of Asalab">
+          <img loading="lazy" src="./shared/asalab.webp" width="1000" height="625" alt="Preview of Asalab">
         </div>
         <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://www.asalab.fr/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
@@ -494,7 +494,7 @@
           </div>
         </div>
         <div class="tooltip_image">
-          <img loading="lazy" src="./shared/numeriquelles.webp" alt="Preview of Numériqu'elles">
+          <img loading="lazy" src="./shared/numeriquelles.webp" width="1000" height="625" alt="Preview of Numériqu'elles">
         </div>
         <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://khadija-asa.github.io/numeriqu-elles/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
@@ -529,10 +529,8 @@
 
   <!-- contact -->
   <section class="contact" id="contact">
-    <br>
-    <br>
-    <br>
-    <div class="introduce_title">
+    <div class="contact_intro">
+      <div class="introduce_title">
         <h2>
           Let's get in touch
           <img loading="lazy" src="./shared/asterisque.svg" alt="">
@@ -542,58 +540,60 @@
           developer to bring your ideas to life, feel free to reach out! Let's discuss how we can 
           <span class="highlight">collaborate</span> and <span class="highlight">build</span> something exceptional.
         </p>
+      </div>
+      <ul class="contact_details">
+        <li>
+          <span class="contact_label">Email</span>
+          <a href="mailto:khadidja.aitsiali@gmail.com">khadidja.aitsiali@gmail.com</a>
+        </li>
+        <li>
+          <span class="contact_label">Location</span>
+          <span>Based in France</span>
+        </li>
+        <li>
+          <span class="contact_label">Status</span>
+          <span><span aria-hidden="true" class="blink">_</span>Available for freelance</span>
+        </li>
+      </ul>
     </div>
-
     <div class="form_wrapper">
       <form id="contactForm" novalidate>
-
-          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
-
-          <div class="field" id="field-name">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" aria-describedby="name-error"/>
-            <span class="error-msg" id="name-error">Please enter your name.</span>
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+        <div class="field" id="field-name">
+          <label for="name"><span aria-hidden="true" class="field_number">01</span>Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" aria-describedby="name-error"/>
+          <span class="error-msg" id="name-error">Please enter your name.</span>
+        </div>
+        <div class="field" id="field-email">
+          <label for="email"><span aria-hidden="true" class="field_number">02</span>Email</label>
+          <input type="email" id="email" name="email" placeholder="you@gmail.com" autocomplete="email" aria-describedby="email-error"/>
+          <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+        </div>
+        <div class="field field_full" id="field-subject">
+          <label for="subject"><span aria-hidden="true" class="field_number">03</span>Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's the subject ?" aria-describedby="subject-error"/>
+          <span class="error-msg" id="subject-error">Please enter a subject.</span>
+        </div>
+        <div class="field field_full" id="field-message">
+          <label for="message"><span aria-hidden="true" class="field_number">04</span>Message</label>
+          <textarea id="message" name="message" placeholder="What can I do for you ?" aria-describedby="message-error"></textarea>
+          <span class="error-msg" id="message-error">Please write your message.</span>
+        </div>
+        <div class="field_full" id="field-gdpr">
+          <div class="field gdpr-field">
+            <input type="checkbox" id="gdpr" name="gdpr" aria-describedby="gdpr-error"/>
+            <label for="gdpr">
+              I agree that my data may be used to process my request, in accordance
+              with the <a href="notice.html" target="_blank">privacy policy<span class="sr_only"> (opens in a new tab)</span></a>.
+            </label>
           </div>
-          <br>
-    
-          <div class="field" id="field-email">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@gmail.com" autocomplete="email" aria-describedby="email-error"/>
-            <span class="error-msg" id="email-error">Please enter a valid email address.</span>
-          </div>
-          <br>
-
-          <div class="field" id="field-subject">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What's the subject ?" aria-describedby="subject-error"/>
-            <span class="error-msg" id="subject-error">Please enter a subject.</span>
-          </div>
-          <br>
-      
-          <div class="field" id="field-message">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="What can I do for you ?" aria-describedby="message-error"></textarea>
-            <span class="error-msg" id="message-error">Please write your message.</span>
-          </div>
-
-          <div id="field-gdpr">
-            <div class="field gdpr-field">
-              <input type="checkbox" id="gdpr" name="gdpr" aria-describedby="gdpr-error"/>
-              <label for="gdpr">
-                I agree that my data may be used to process my request, in accordance
-                with the <a href="notice.html" target="_blank">privacy policy<span class="sr_only"> (opens in a new tab)</span></a>.
-              </label>
-            </div>
-            <span class="error-msg" id="gdpr-error">
-              Please accept the privacy policy.
-            </span>
-          </div>
-      
-        <button type="submit" class="btn" id="submitBtn">Send</button>
-
+          <span class="error-msg" id="gdpr-error">
+            Please accept the privacy policy.
+          </span>
+        </div>
+        <button type="submit" class="btn" id="submitBtn">Send message</button>
       </form>
     </div>
-    
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   </section>
