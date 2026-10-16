@@ -29,11 +29,11 @@
   <link rel="preload" href="./fonts/pergola/pergola.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css">
 </head>
 
 <body>
 
+  <div aria-hidden="true" class="scroll_progress"></div>
   <div aria-hidden="true" class="glow"></div>
   <div aria-hidden="true" class="grain"><div class="grain_texture"></div></div>
 
@@ -163,7 +163,7 @@
   <!-- gallery -->
   <section class="grid_gallery">
     <div class="gallery_box">
-      <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500" class="box_title">
+      <div class="box_title">
         <p class="box_number">1/4</p>
         <h3>   
           <span class="box_icons">
@@ -184,11 +184,11 @@
           js frameworks
         </h3>
       </div>
-      <figure data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500" class="gallery_img gallery1">
+      <figure class="gallery_img gallery1">
       </figure>
     </div>
     <div class="gallery_box">
-      <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" class="box_title">
+      <div class="box_title">
         <p class="box_number">2/4</p>
         <h3> 
           <span class="box_icons">
@@ -209,11 +209,11 @@
           responsive web
         </h3>
       </div>
-      <figure data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" class="gallery_img gallery2">
+      <figure class="gallery_img gallery2">
       </figure>
     </div>
     <div class="gallery_box">
-      <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" class="box_title">
+      <div class="box_title">
         <p class="box_number">3/4</p>
         <h3> 
           <span class="box_icons">
@@ -234,11 +234,11 @@
           seo optimization
         </h3>
       </div>
-      <figure data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" class="gallery_img gallery3">
+      <figure class="gallery_img gallery3">
       </figure>
     </div>
     <div class="gallery_box">
-      <div data-aos="fade-up" data-aos-delay="700" data-aos-duration="1500" class="box_title">
+      <div class="box_title">
         <p class="box_number">4/4</p>
         <h3>
           <span class="box_icons">
@@ -259,14 +259,14 @@
           gsap animations
         </h3>
       </div>
-      <figure data-aos="fade-up" data-aos-delay="700" data-aos-duration="1500" class="gallery_img gallery4">
+      <figure class="gallery_img gallery4">
       </figure>
     </div>
   </section>
 
   <!-- work -->
   <section class="work_text" id="work">
-    <p data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+    <p>
       intuitive and efficient web experiences are my <span class="highlight">focus</span> 
       <img loading="lazy" src="./shared/zelij.webp" alt="">
       Each project is a challenge to <span class="highlight">innovate</span>
@@ -280,121 +280,121 @@
   <!-- skills -->
   <section  class="list_skills"> 
     <ul class="skills">
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         react.js
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="50">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         vue.js
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         javaScript
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="150">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         node.js
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         html
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="250">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         css
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         sass
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="350">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         tailwind css
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         git
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="450">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         gsap
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         cms
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="550">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         webflow
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         wordpress
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="650">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         responsive design
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="700">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         mobile first
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="750">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         figma
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="800">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         test/debugging
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="850">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         php/symfony
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="900">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
         accessibility
       </li>
-      <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="950">
+      <li>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width=".5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
@@ -406,7 +406,7 @@
 
   <!-- work accordion -->
   <section class="work_accordion">
-    <div data-aos="fade-up" data-aos-duration="1000" class="accordion_intro">
+    <div class="accordion_intro">
       <h2>
         some projects
         <img loading="lazy" src="./shared/asterisque.svg" alt="">
@@ -420,7 +420,7 @@
     </div>
     <ul class="accordion_list">
       <li>
-        <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="50" class="accordion_element">
+        <div class="accordion_element">
           <span class="accordion_number">00</span>
           <div class="accordion_info">
             <h3 class="accordion_title">l'observatoire <span class="accordion_badge">✦ awwwards</span></h3>
@@ -431,12 +431,12 @@
         <div class="tooltip_image">
           <img loading="lazy" src="./shared/observatoire.webp" alt="Preview of L'Observatoire">
         </div>
-        <div data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="50" class="accordion_links">
+        <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://observatoire-weld.vercel.app/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
         </div>
       </li>
       <li>
-        <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="100" class="accordion_element">
+        <div class="accordion_element">
           <span class="accordion_number">01</span>
           <div class="accordion_info">
             <h3 class="accordion_title">lacet fluffy</h3>
@@ -447,12 +447,12 @@
         <div class="tooltip_image">
           <img loading="lazy" src="./shared/lacet_fluffy.webp" alt="Preview of Lacet Fluffy">
         </div>
-        <div data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="100" class="accordion_links">
+        <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://fluffy-laces.vercel.app/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
         </div>
       </li>
       <li>
-        <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="150" class="accordion_element">
+        <div class="accordion_element">
           <span class="accordion_number">02</span>
           <div class="accordion_info">
             <h3 class="accordion_title">last champion</h3>
@@ -463,13 +463,13 @@
         <div class="tooltip_image">
           <img loading="lazy" src="./shared/last_champion.webp" alt="Preview of Last Champion">
         </div>
-        <div data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="150" class="accordion_links">
+        <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://www.lastchampion.fr/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
           <a class="accordion_git" href="https://github.com/Khadija-Asa/LastChampion" rel="noopener noreferrer" target="_blank">code <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
         </div>
       </li>
       <li>
-        <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="200" class="accordion_element">
+        <div class="accordion_element">
           <span class="accordion_number">03</span>
           <div class="accordion_info">
             <h3 class="accordion_title">asalab</h3>
@@ -480,12 +480,12 @@
         <div class="tooltip_image">
           <img loading="lazy" src="./shared/asalab.webp" alt="Preview of Asalab">
         </div>
-        <div data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="200" class="accordion_links">
+        <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://www.asalab.fr/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
         </div>
       </li>
       <li>
-        <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="250" class="accordion_element">
+        <div class="accordion_element">
           <span class="accordion_number">04</span>
           <div class="accordion_info">
             <h3 class="accordion_title">numériqu'elles</h3>
@@ -496,7 +496,7 @@
         <div class="tooltip_image">
           <img loading="lazy" src="./shared/numeriquelles.webp" alt="Preview of Numériqu'elles">
         </div>
-        <div data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="250" class="accordion_links">
+        <div class="accordion_links">
           <a class="accordion_git accordion_live" href="https://khadija-asa.github.io/numeriqu-elles/" rel="noopener noreferrer" target="_blank">live <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
           <a class="accordion_git" href="https://github.com/Khadija-Asa/numeriqu-elles" rel="noopener noreferrer" target="_blank">code <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a>
         </div>
@@ -532,7 +532,7 @@
     <br>
     <br>
     <br>
-    <div data-aos="fade-up" data-aos-duration="1000" class="introduce_title">
+    <div class="introduce_title">
         <h2>
           Let's get in touch
           <img loading="lazy" src="./shared/asterisque.svg" alt="">
@@ -549,34 +549,34 @@
 
           <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
 
-          <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="200" data-aos-duration="900" class="field" id="field-name">
+          <div class="field" id="field-name">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" aria-describedby="name-error"/>
             <span class="error-msg" id="name-error">Please enter your name.</span>
           </div>
           <br>
     
-          <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="250" data-aos-duration="1200" class="field" id="field-email">
+          <div class="field" id="field-email">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="you@gmail.com" autocomplete="email" aria-describedby="email-error"/>
             <span class="error-msg" id="email-error">Please enter a valid email address.</span>
           </div>
           <br>
 
-          <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="300" data-aos-duration="1500" class="field" id="field-subject">
+          <div class="field" id="field-subject">
             <label for="subject">Subject</label>
             <input type="text" id="subject" name="subject" placeholder="What's the subject ?" aria-describedby="subject-error"/>
             <span class="error-msg" id="subject-error">Please enter a subject.</span>
           </div>
           <br>
       
-          <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="350" data-aos-duration="1800" class="field" id="field-message">
+          <div class="field" id="field-message">
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="What can I do for you ?" aria-describedby="message-error"></textarea>
             <span class="error-msg" id="message-error">Please write your message.</span>
           </div>
 
-          <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="400" data-aos-duration="2100" id="field-gdpr">
+          <div id="field-gdpr">
             <div class="field gdpr-field">
               <input type="checkbox" id="gdpr" name="gdpr" aria-describedby="gdpr-error"/>
               <label for="gdpr">
@@ -589,7 +589,7 @@
             </span>
           </div>
       
-        <button data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="450" data-aos-duration="2400" type="submit" class="btn" id="submitBtn">Send</button>
+        <button type="submit" class="btn" id="submitBtn">Send</button>
 
       </form>
     </div>
@@ -610,14 +610,14 @@
 <footer class="footer">
     <div class="footer_title">
 
-      <p class="footer_heading" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="50">
+      <p class="footer_heading">
         frontend 
-        <span data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100" class="highlight">&</span> 
+        <span class="highlight">&</span> 
         creative <br>
         developer
       </p>
 
-      <p class="footer_subtitle" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="150">
+      <p class="footer_subtitle">
         since 2021. <br>
         let's innovate together.
       </p>
@@ -626,14 +626,14 @@
 
     <div class="footer_button">
 
-      <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200" href="https://www.linkedin.com/in/khadidja-ait-si-ali/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/khadidja-ait-si-ali/" target="_blank" rel="noopener noreferrer">
         Linkedin <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span>
       </a>
-      <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="250" href="https://github.com/Khadija-Asa" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/Khadija-Asa" target="_blank" rel="noopener noreferrer">
         Github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span>
       </a>
       <span class="element_bg"></span>
-      <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300" href="mailto:khadidja.aitsiali@gmail.com">
+      <a href="mailto:khadidja.aitsiali@gmail.com">
         Email <span aria-hidden="true">↗</span>
       </a>
 
@@ -668,13 +668,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="./js/script.js"></script>
-  <!-- aos -->
-  <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    });
-  </script>
   <!-- mouse -->
   <script src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
   <script>

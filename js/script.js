@@ -19,7 +19,6 @@ function introAnimation() {
 }
 
 function heroScrollAnimation() {
-  gsap.registerPlugin(ScrollTrigger);
   gsap.timeline({
     scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
   })
@@ -36,7 +35,7 @@ function starAnimation() {
 }
 
 function magneticButtons() {
-  document.querySelectorAll(".hero_button a").forEach(button => {
+  document.querySelectorAll(".hero_button a, .footer_button a, #submitBtn").forEach(button => {
     button.classList.add("is_magnetic");
     button.addEventListener("mousemove", (e) => {
       const rect = button.getBoundingClientRect();
@@ -87,15 +86,244 @@ function heroPointer() {
   });
 }
 
+function splitWords(element) {
+  const units = [];
+  [...element.childNodes].forEach(node => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const fragment = document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(part => {
+        if (!part) return;
+        if (/^\s+$/.test(part)) {
+          fragment.append(part);
+          return;
+        }
+        const word = document.createElement("span");
+        word.className = "word";
+        word.textContent = part;
+        fragment.append(word);
+        units.push(word);
+      });
+      node.replaceWith(fragment);
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== "BR") {
+      node.classList.add("word");
+      units.push(node);
+    }
+  });
+  return units;
+}
+
+function headerAndProgress() {
+  gsap.to(".scroll_progress", {
+    scaleX: 1,
+    ease: "none",
+    scrollTrigger: { start: 0, end: "max", scrub: 0.3 }
+  });
+
+  const menu = document.querySelector(".menu");
+  ScrollTrigger.create({
+    start: 0,
+    end: "max",
+    onUpdate: (self) => {
+      const hide = self.direction === 1 && self.scroll() > window.innerHeight;
+      gsap.to(menu, { yPercent: hide ? -100 : 0, duration: 0.5, ease: "power3.out", overwrite: true });
+    }
+  });
+}
+
+function sectionTitles() {
+  gsap.utils.toArray(".introduce_title h2, .accordion_intro h2").forEach(title => {
+    gsap.fromTo(title,
+      { yPercent: 60, opacity: 0, clipPath: "inset(0 0 100% 0)" },
+      {
+        yPercent: 0,
+        opacity: 1,
+        clipPath: "inset(0 0 0% 0)",
+        duration: 1.4,
+        ease: "expo.out",
+        clearProps: "clipPath",
+        scrollTrigger: { trigger: title, start: "top 85%" }
+      }
+    );
+  });
+
+  gsap.utils.toArray(".introduce_paragraph, .accordion_intro p").forEach(paragraph => {
+    gsap.from(splitWords(paragraph), {
+      yPercent: 100,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.015,
+      ease: "power3.out",
+      scrollTrigger: { trigger: paragraph, start: "top 85%" }
+    });
+  });
+}
+
+function galleryAnimation() {
+  gsap.utils.toArray(".gallery_box").forEach((box, i) => {
+    const image = box.querySelector(".gallery_img");
+    gsap.timeline({ scrollTrigger: { trigger: box, start: "top bottom" } })
+      .fromTo(image, { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 2.4, delay: i * 0.35, ease: "expo.inOut" })
+      .from(box.querySelector(".box_title").children, { y: 40, opacity: 0, duration: 1.4, stagger: 0.2, ease: "power3.out" }, "-=1.4");
+    gsap.fromTo(image, { backgroundPosition: "50% 0%" }, {
+      backgroundPosition: "50% 100%",
+      ease: "none",
+      scrollTrigger: { trigger: box, start: "top bottom", end: "bottom top", scrub: true }
+    });
+  });
+}
+
+function statementAnimation() {
+  const statement = document.querySelector(".work_text p");
+  gsap.fromTo(splitWords(statement), { opacity: 0.12 }, {
+    opacity: 1,
+    stagger: 0.05,
+    ease: "none",
+    scrollTrigger: { trigger: statement, start: "top 80%", end: "bottom 50%", scrub: true }
+  });
+}
+
+function skillsAnimation() {
+  const skills = gsap.utils.toArray(".skills li");
+  gsap.from(skills, {
+    x: () => gsap.utils.random(-300, 300),
+    y: () => gsap.utils.random(-200, 200),
+    rotation: () => gsap.utils.random(-45, 45),
+    scale: 0.6,
+    opacity: 0,
+    duration: 1.6,
+    ease: "expo.out",
+    stagger: { each: 0.03, from: "center" },
+    scrollTrigger: { trigger: ".skills", start: "top 80%" },
+    onStart: () => gsap.set(skills, { transition: "none" }),
+    onComplete: () => gsap.set(skills, { clearProps: "transform,transition" })
+  });
+}
+
+function projectsAnimation() {
+  gsap.utils.toArray(".accordion_list li").forEach(row => {
+    gsap.timeline({ scrollTrigger: { trigger: row, start: "top 88%" } })
+      .fromTo(row, { "--line": 0 }, { "--line": 1, duration: 1.4, ease: "expo.inOut" })
+      .from(row.querySelector(".accordion_number"), { yPercent: 100, opacity: 0, duration: 0.9, ease: "power3.out" }, 0.3)
+      .from(row.querySelectorAll(".accordion_info > *"), { y: 30, opacity: 0, duration: 0.9, stagger: 0.08, ease: "power3.out" }, 0.4)
+      .from(row.querySelector(".accordion_links"), { x: 30, opacity: 0, duration: 0.9, ease: "power3.out" }, 0.55);
+  });
+
+  gsap.matchMedia().add("(min-width: 1024px) and (pointer: fine)", () => {
+    const cleanups = gsap.utils.toArray(".accordion_list li").map(row => {
+      const tooltip = row.querySelector(".tooltip_image");
+      const links = row.querySelector(".accordion_links");
+      gsap.set(tooltip, { left: 0, top: 0, bottom: "auto", xPercent: -50, yPercent: -50 });
+      const text = row.querySelector(".accordion_element");
+      const clampX = (x) => {
+        const rowLeft = row.getBoundingClientRect().left;
+        const half = tooltip.offsetWidth / 2 + 24;
+        const min = text.getBoundingClientRect().right - rowLeft + half;
+        const max = links.getBoundingClientRect().left - rowLeft - half;
+        return min > max ? (min + max) / 2 : gsap.utils.clamp(min, max, x);
+      };
+      const xTo = gsap.quickTo(tooltip, "x", { duration: 0.6, ease: "power3.out" });
+      const yTo = gsap.quickTo(tooltip, "y", { duration: 0.6, ease: "power3.out" });
+      const rotationTo = gsap.quickTo(tooltip, "rotation", { duration: 0.8, ease: "power3.out" });
+      let lastX = 0;
+      let resetTimer;
+      const enter = (e) => {
+        const rect = row.getBoundingClientRect();
+        lastX = clampX(e.clientX - rect.left);
+        gsap.set(tooltip, { x: lastX, y: e.clientY - rect.top, rotation: 0 });
+      };
+      const move = (e) => {
+        const rect = row.getBoundingClientRect();
+        const x = clampX(e.clientX - rect.left);
+        xTo(x);
+        yTo(e.clientY - rect.top);
+        rotationTo(gsap.utils.clamp(-12, 12, (x - lastX) * 0.6));
+        lastX = x;
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => rotationTo(0), 100);
+      };
+      const hideTooltip = () => row.classList.add("is_on_links");
+      const showTooltip = () => row.classList.remove("is_on_links");
+      row.addEventListener("mouseenter", enter);
+      row.addEventListener("mousemove", move);
+      links.addEventListener("mouseenter", hideTooltip);
+      links.addEventListener("mouseleave", showTooltip);
+      return () => {
+        row.removeEventListener("mouseenter", enter);
+        row.removeEventListener("mousemove", move);
+        links.removeEventListener("mouseenter", hideTooltip);
+        links.removeEventListener("mouseleave", showTooltip);
+        showTooltip();
+      };
+    });
+    return () => cleanups.forEach(cleanup => cleanup());
+  });
+}
+
+function marqueeAnimation() {
+  const skewTo = gsap.quickTo(".marquee", "skewY", { duration: 0.6, ease: "power3.out" });
+  let resetTimer;
+  ScrollTrigger.create({
+    start: 0,
+    end: "max",
+    onUpdate: (self) => {
+      skewTo(gsap.utils.clamp(-5, 5, self.getVelocity() / -300));
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => skewTo(0), 120);
+    }
+  });
+}
+
+function contactAnimation() {
+  const items = gsap.utils.toArray(".form_wrapper .field:not(.gdpr-field), #field-gdpr, #submitBtn");
+  gsap.from(items, {
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+    ease: "power3.out",
+    scrollTrigger: { trigger: ".form_wrapper", start: "top 80%" },
+    onStart: () => gsap.set(items, { transition: "none" }),
+    onComplete: () => gsap.set(items, { clearProps: "transition" })
+  });
+}
+
+function footerAnimation() {
+  const words = splitWords(document.querySelector(".footer_heading"));
+  const buttons = gsap.utils.toArray(".footer_button a");
+  gsap.timeline({ scrollTrigger: { trigger: ".footer", start: "top 75%" } })
+    .from(words, { yPercent: 120, rotation: 8, opacity: 0, duration: 1.3, stagger: 0.08, ease: "expo.out" })
+    .from(".footer_subtitle", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, 0.4)
+    .from(buttons, {
+      y: 30,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.1,
+      ease: "power3.out",
+      onStart: () => gsap.set(buttons, { transition: "none" }),
+      onComplete: () => gsap.set(buttons, { clearProps: "transition" })
+    }, 0.6);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (reduceMotion) {
     gsap.set([".first", ".second", ".third"], { left: "-100%" });
     return;
   }
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.defaults({ toggleActions: "restart reset restart reset" });
   introAnimation();
   heroScrollAnimation();
   starAnimation();
   heroPointer();
+  headerAndProgress();
+  sectionTitles();
+  galleryAnimation();
+  statementAnimation();
+  skillsAnimation();
+  projectsAnimation();
+  marqueeAnimation();
+  contactAnimation();
+  footerAnimation();
   if (finePointer) magneticButtons();
 });
 
