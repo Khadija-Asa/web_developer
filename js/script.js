@@ -1,10 +1,3 @@
-// load fast
-function loadGSAP() {
-  var script = document.createElement('script');
-  script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js";
-  document.body.appendChild(script);
-}
-
 // Overlay
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.to(".first", {
@@ -144,3 +137,64 @@ form.addEventListener('submit', async (e) => {
     submitBtn.textContent = 'Send';
   }
 });
+
+const GA_ID = 'G-7XBSHTDGN6';
+const CONSENT_KEY = 'cookie-consent';
+const CONSENT_DURATION = 395 * 24 * 60 * 60 * 1000;
+const cookieBanner = document.getElementById('cookieBanner');
+
+function getConsent() {
+  try {
+    const consent = JSON.parse(localStorage.getItem(CONSENT_KEY));
+    if (consent && Date.now() - consent.date < CONSENT_DURATION) return consent.value;
+  } catch {}
+  return null;
+}
+
+function saveConsent(value) {
+  try {
+    localStorage.setItem(CONSENT_KEY, JSON.stringify({ value, date: Date.now() }));
+  } catch {}
+}
+
+function loadAnalytics() {
+  window['ga-disable-' + GA_ID] = false;
+  if (window.gtag) return;
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(script);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_ID, { cookie_expires: CONSENT_DURATION / 1000 });
+}
+
+function removeAnalytics() {
+  window['ga-disable-' + GA_ID] = true;
+  document.cookie.split(';')
+    .map(cookie => cookie.split('=')[0].trim())
+    .filter(name => name.startsWith('_ga'))
+    .forEach(name => {
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.' + location.hostname.replace(/^www\./, '');
+    });
+}
+
+function setConsent(value) {
+  saveConsent(value);
+  cookieBanner.hidden = true;
+  value === 'accepted' ? loadAnalytics() : removeAnalytics();
+}
+
+document.getElementById('cookieAccept').addEventListener('click', () => setConsent('accepted'));
+document.getElementById('cookieRefuse').addEventListener('click', () => setConsent('refused'));
+document.getElementById('cookieSettings').addEventListener('click', () => {
+  cookieBanner.hidden = false;
+});
+
+if (getConsent() === 'accepted') {
+  loadAnalytics();
+} else if (getConsent() === null) {
+  cookieBanner.hidden = false;
+}

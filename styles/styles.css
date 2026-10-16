@@ -166,6 +166,10 @@
   text-align: justify;
 }
 
+.introduce_title h2 {
+  font-size: inherit;
+}
+
 .introduce_title img {
   width: clamp(0.9375rem, 0.875rem + 0.3125vw, 1.25rem);
   margin-left: -3px;
@@ -247,12 +251,12 @@
   font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
 }
 
-.box_title h5 span {
+.box_title h5 .highlight {
   text-decoration: none;
   color: var(--Purple);
 }
 
-.box_title h5 p {
+.box_title h5 .box_icons {
   transform: rotate(180deg);
   filter: grayscale(1);
   opacity: .2;
@@ -261,11 +265,11 @@
   gap: 10px;
 }
 
-.box_title h5 p svg {
+.box_title h5 .box_icons svg {
   width: 25px;
 }
 
-.box_title p {
+.box_title .box_icons {
   font-family: 'Pergola';
   font-size: 1rem;
   text-transform: lowercase;
@@ -389,12 +393,16 @@
 }
 
 /* accordion text */
-.work_accordion h1 {
+.accordion_intro {
   text-transform: uppercase;
   padding: 5rem 1rem;
   text-align: justify;
   font-size: clamp(2rem, 1.4rem + 3vw, 5rem);
   font-family: 'Bold';
+}
+
+.accordion_intro h1 {
+  font-size: inherit;
 }
 
 .work_accordion img {
@@ -866,4 +874,73 @@ footer {
 .bottom_title span,
 .bottom-title a {
   font-size: clamp(0.5rem, 0.46rem + 0.2vw, 0.7rem);
+}
+
+.cookie_settings {
+  background: none;
+  border: none;
+  color: var(--White);
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.cookie_banner {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(40rem, calc(100% - 2rem));
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.2rem;
+  background-color: var(--Black);
+  border: 1px solid var(--Gray);
+  border-radius: 5px;
+  font-size: .9rem;
+  z-index: 1000;
+}
+
+.cookie_banner[hidden] {
+  display: none;
+}
+
+.cookie_banner a {
+  color: var(--Purple);
+  text-decoration: underline;
+}
+
+.cookie_buttons {
+  display: flex;
+  gap: .8rem;
+}
+
+.cookie_buttons button {
+  border: 1px solid var(--Gray);
+  border-radius: 5px;
+  padding: .5rem 1rem .4rem 1rem;
+  background-color: var(--Black);
+  color: var(--White);
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.cookie_buttons button:hover {
+  transform: translate(0, -2px);
+}
+
+#cookieAccept {
+  background-color: var(--Gray);
+  color: var(--Black);
+}
+
+@media (max-width: 600px) {
+  .cookie_banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .cookie_buttons button {
+    flex: 1;
+  }
 }
