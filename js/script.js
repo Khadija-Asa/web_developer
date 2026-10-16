@@ -1,5 +1,9 @@
 // Overlay
 document.addEventListener("DOMContentLoaded", (event) => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    gsap.set([".first", ".second", ".third"], { left: "-100%" });
+    return;
+  }
   gsap.to(".first", {
     duration: 2.5,
     delay: 0,

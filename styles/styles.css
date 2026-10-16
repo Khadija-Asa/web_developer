@@ -33,14 +33,16 @@
   text-align: center;
 }
 
-.list_element h3 {
+.list_element .menu_link {
   display: flex;
   transition: all .5s ease;
   display: flex;
   align-items: flex-end;
+  font-size: 1.17em;
+  font-weight: bold;
 }
 
-.list_element h3:hover {
+.list_element .menu_link:hover {
   transform: translate(0, -2px);
 }
 
@@ -235,13 +237,13 @@
   justify-content: space-between;
 }
 
-.box_title h4 {
+.box_title .box_number {
   font-family: 'Aceh';
   font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
   font-weight: 100;
 }
 
-.box_title h5 {
+.box_title h3 {
   filter: drop-shadow(0 0 8rem var(--Gray));
   padding: 1rem 0rem;
   font-family: 'Bold';
@@ -251,12 +253,12 @@
   font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
 }
 
-.box_title h5 .highlight {
+.box_title h3 .highlight {
   text-decoration: none;
   color: var(--Purple);
 }
 
-.box_title h5 .box_icons {
+.box_title h3 .box_icons {
   transform: rotate(180deg);
   filter: grayscale(1);
   opacity: .2;
@@ -265,7 +267,7 @@
   gap: 10px;
 }
 
-.box_title h5 .box_icons svg {
+.box_title h3 .box_icons svg {
   width: 25px;
 }
 
@@ -401,7 +403,7 @@
   font-family: 'Bold';
 }
 
-.accordion_intro h1 {
+.accordion_intro h2 {
   font-size: inherit;
 }
 
@@ -497,6 +499,11 @@ li:hover .tooltip_image img {
 }
 
 /* number */
+.accordion_title {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 .accordion_number {
   font-family: 'Aceh';
   font-size: clamp(1.5rem, 1rem + 2.5vw, 4rem);
@@ -600,16 +607,13 @@ textarea {
 }
 
 .gdpr-field input[type="checkbox"] {
+  appearance: auto;
+  accent-color: var(--Purple);
   cursor: pointer;
-  width: 1px;
-  height: 1px;
-  border: 1px solid var(--Purple);
-  background-color: var(--Gray);
-  transition: all 0.2s ease;
-}
-
-.gdpr-field input[type="checkbox"]:checked {
-  background-color: var(--Purple);
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .gdpr-field label {
@@ -787,6 +791,15 @@ textarea {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .marquee div span {
+    animation: none;
+  }
+  .marquee div:after {
+    display: none;
+  }
+}
+
 
 
 /* footer */
@@ -814,18 +827,20 @@ footer {
   align-items: center;
 }
 
-.footer_title h5 {
+.footer_title .footer_heading {
   font-size: clamp(2rem, 1.5897rem + 2.0513vw, 4rem);
   margin-bottom: 0;
   font-family: 'Bold';
+  font-weight: bold;
 }
 
 .footer_title span {
   text-decoration: none !important;
 }
 
-.footer_title h6 {
+.footer_title .footer_subtitle {
   font-size: 1.5rem;
+  font-weight: bold;
   font-style: italic;
   margin-top: 2rem;
 }

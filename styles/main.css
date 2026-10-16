@@ -79,7 +79,7 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: smooth;
+   scroll-behavior: auto;
   }
 
   *,
@@ -88,12 +88,20 @@ select {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: smooth !important;
+    scroll-behavior: auto !important;
   }
 }
 
-::-webkit-scrollbar {
-  display: none;
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--Gray) var(--Black);
+}
+
+a:focus-visible,
+button:focus-visible,
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--Purple);
+  outline-offset: 3px;
 }
 
 /* global animation */
@@ -191,10 +199,12 @@ select {
 }
 
 /* back to top */
-.back-to-top a {
+.back-to-top button {
   transition: all .2s ease;
   font-size: 30px;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 #btn-back-to-top {
