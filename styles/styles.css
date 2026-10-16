@@ -36,7 +36,6 @@
 .list_element .menu_link {
   display: flex;
   transition: all .5s ease;
-  display: flex;
   align-items: flex-end;
   font-size: 1.17em;
   font-weight: bold;
@@ -124,7 +123,7 @@
 .social_media {
   left: .8rem;
   position: fixed;
-  width: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);;
+  width: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
   z-index: 10;
   bottom: .8rem;
 }
@@ -153,13 +152,11 @@
   text-align: justify;
   font-size: clamp(2rem, 1.4rem + 3vw, 5rem);
   font-family: 'Bold';
-  padding-bottom: clamp(2rem, 1.6rem + 2vw, 4rem);
   padding: 0 1rem 5rem 1rem;
 }
 
 .introduce_title p {
   font-family: 'Pergola';
-  text-transform: uppercase;
   font-weight: 100;
   max-width: 700px;
   margin-top: 20px;
@@ -175,10 +172,6 @@
 .introduce_title img {
   width: clamp(0.9375rem, 0.875rem + 0.3125vw, 1.25rem);
   margin-left: -3px;
-}
-
-.introduce_title p:nth-child(1) span:nth-child(3) {
-  text-decoration: none;
 }
 
 .introduce_paragraph img {
@@ -436,7 +429,7 @@
 }
 
 .accordion_list li {
-  font-family: 'bold';
+  font-family: 'Bold';
   border-top: 1px solid var(--Gray);
   display: flex;
   align-items: center;
@@ -697,7 +690,6 @@ textarea {
 
 /* marquee */
 .double_marquee {
-  /* padding-top: clamp(8rem, 6.6rem + 7vw, 15rem); */
   padding-bottom: clamp(1rem, 0.2rem + 4vw, 5rem);
 }
 
@@ -804,15 +796,15 @@ textarea {
 
 /* footer */
 footer {
-  position: absolute;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   border-top: 1px solid var(--White);
   font-family: 'Pergola';
-  width: 100vw;
+  width: 100%;
   background-color: var(--Black);
   margin-top: clamp(8rem, 6rem + 10vw, 15rem);
-  z-index: -99;
+  z-index: 0;
 }
 
 .footer {
@@ -880,14 +872,7 @@ footer {
   align-items: flex-end;
 }
 
-.bottom-title {
-  padding-top: 5rem;
-  margin-bottom: 0;
-  padding-bottom: 5rem;
-}
-
-.bottom_title span,
-.bottom-title a {
+.bottom_title span {
   font-size: clamp(0.5rem, 0.46rem + 0.2vw, 0.7rem);
 }
 

@@ -1,5 +1,5 @@
 // Overlay
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     gsap.set([".first", ".second", ".third"], { left: "-100%" });
     return;
@@ -25,28 +25,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 // Scroll to top
-let mybutton = document.getElementById("btn-back-to-top");
-
-window.onscroll = function () {
-  scrollFunction();
-};
+const mybutton = document.getElementById("btn-back-to-top");
 
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+  mybutton.style.display = window.scrollY > 20 ? "block" : "none";
 }
-mybutton.addEventListener("click", backToTop);
 
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+window.addEventListener("scroll", scrollFunction, { passive: true });
+
+mybutton.addEventListener("click", () => {
+  window.scrollTo({ top: 0 });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
 
 // Form contact
 const form = document.getElementById('contactForm');
