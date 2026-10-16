@@ -61,7 +61,7 @@ html:focus-within {
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Set core body defaults */
@@ -97,8 +97,11 @@ select {
 }
 
 html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--Gray) var(--Black);
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .sr_only {
