@@ -368,16 +368,19 @@ const mybutton = document.getElementById("btn-back-to-top");
 
 const socialMedia = document.querySelector(".social_media");
 const footer = document.querySelector(".footer");
+const footerBar = document.querySelector(".footer_bottom");
 
 function scrollFunction() {
   const footerVisible = footer.getBoundingClientRect().top < window.innerHeight;
+  const barOffset = window.innerHeight - footerBar.getBoundingClientRect().top + 20;
   mybutton.style.display = window.scrollY > window.innerHeight / 2 ? "block" : "none";
-  mybutton.classList.toggle("is_hidden", footerVisible);
+  mybutton.style.bottom = Math.max(20, barOffset) + "px";
   socialMedia.classList.toggle("is_hidden", footerVisible);
   heroScroll.classList.toggle("is_hidden", window.scrollY > 20);
 }
 
 window.addEventListener("scroll", scrollFunction, { passive: true });
+window.addEventListener("resize", scrollFunction);
 
 const scrollBehavior = reduceMotion ? "auto" : "smooth";
 
