@@ -5,19 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
   gsap.to(".first", {
-    duration: 2.5,
+    duration: 1.4,
     delay: 0,
     left: "-100%",
     ease: "expo.inOut"
   });
   gsap.to(".second", {
-    duration: 2.5,
-    delay: 0.2,
+    duration: 1.4,
+    delay: 0.1,
     left: "-100%",
     ease: "expo.inOut"
   });
   gsap.to(".third", {
-    duration: 2.5,
+    duration: 1.4,
     delay: 0, 
     left: "-100%",
     ease: "expo.inOut"
