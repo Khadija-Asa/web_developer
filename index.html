@@ -537,19 +537,21 @@
           <textarea id="message" name="message" placeholder="What can I do for you ?" aria-describedby="message-error"></textarea>
           <span class="error-msg" id="message-error">Please write your message.</span>
         </div>
-        <div class="field_full" id="field-gdpr">
-          <div class="field gdpr-field">
-            <input type="checkbox" id="gdpr" name="gdpr" aria-describedby="gdpr-error"/>
-            <label for="gdpr">
-              I agree that my data may be used to process my request, in accordance
-              with the <a href="notice.html" target="_blank">privacy policy<span class="sr_only"> (opens in a new tab)</span></a>.
-            </label>
+        <div class="form_actions">
+          <div id="field-gdpr">
+            <div class="field gdpr-field">
+              <input type="checkbox" id="gdpr" name="gdpr" aria-describedby="gdpr-error"/>
+              <label for="gdpr">
+                I agree that my data may be used to process my request, in accordance
+                with the <a href="notice.html" target="_blank">privacy policy<span class="sr_only"> (opens in a new tab)</span></a>.
+              </label>
+            </div>
+            <span class="error-msg" id="gdpr-error">
+              Please accept the privacy policy.
+            </span>
           </div>
-          <span class="error-msg" id="gdpr-error">
-            Please accept the privacy policy.
-          </span>
+          <button type="submit" class="btn" id="submitBtn">Send message</button>
         </div>
-        <button type="submit" class="btn" id="submitBtn">Send message</button>
       </form>
     </div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

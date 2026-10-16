@@ -785,26 +785,29 @@ li:hover .tooltip_image img {
 
 /* contact */
 .contact {
-  display: grid;
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 2.5rem + 2vw, 4.5rem);
   text-transform: uppercase;
   padding-top: clamp(8rem, 6rem + 8vw, 14rem);
 }
 
 .contact_intro .introduce_title {
-  padding-bottom: 2.5rem;
+  padding-bottom: clamp(4rem, 3rem + 4vw, 7rem);
 }
 
 .contact_details {
   display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 4rem;
   padding: 0 1rem;
 }
 
 .contact_details li {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: .3rem;
   font-size: clamp(0.85rem, 0.8rem + 0.25vw, 1.05rem);
   letter-spacing: .05em;
@@ -834,13 +837,14 @@ li:hover .tooltip_image img {
 }
 
 .form_wrapper {
-  padding: 0 1rem;
+  width: min(100% - 2rem, 50rem);
+  margin: 0 auto;
 }
 
 #contactForm {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem 2rem;
+  gap: 1.8rem 1.5rem;
 }
 
 .field_full {
@@ -875,14 +879,13 @@ label {
 
 input, textarea {
   width: 100%;
-  background: linear-gradient(var(--Purple), var(--Purple)) 0 100% / 0% 1px no-repeat;
-  border: none;
-  border-bottom: 1px solid rgba(254, 252, 255, .25);
-  border-radius: 0;
-  padding: .8rem 0;
-  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.4rem);
+  background: transparent;
+  border: 1px solid rgba(254, 252, 255, .25);
+  border-radius: 5px;
+  padding: .9rem 1rem;
+  font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
   color: var(--White);
-  transition: background-size .6s ease, border-color .3s ease;
+  transition: border-color .3s ease, box-shadow .3s ease;
   outline: none;
   appearance: none;
 }
@@ -892,7 +895,8 @@ input::placeholder, textarea::placeholder {
 }
 
 input:focus, textarea:focus {
-  background-size: 100% 1px;
+  border-color: var(--Purple);
+  box-shadow: 0 0 0 3px rgba(174, 140, 250, .15);
 }
 
 textarea { 
@@ -938,6 +942,8 @@ textarea {
 
 .gdpr-field label {
   display: block;
+  position: relative;
+  top: .12em;
   color: var(--Gray);
   font-size: clamp(0.65rem, 0.62rem + 0.15vw, 0.8rem);
   letter-spacing: .05em;
@@ -952,6 +958,10 @@ textarea {
   text-decoration: underline;
 }
 
+#field-gdpr {
+  width: 100%;
+}
+
 #field-gdpr .error-msg {
   display: none;
   margin-top: 6px;
@@ -962,8 +972,15 @@ textarea {
 }
 
 /* submit btn */
+.form_actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
 .btn {
-  justify-self: start;
   padding: .9rem 2.2rem .8rem 2.2rem;
   background-color: var(--Gray);
   color: var(--Black);
@@ -981,12 +998,9 @@ textarea {
 
 .btn:disabled { opacity: 0.4; }
 
-@media screen and (width >= 1024px) {
-  .contact {
-    grid-template-columns: 1fr 1.3fr;
-    gap: 4rem;
-    align-items: start;
-    padding-right: 2rem;
+@media screen and (width >= 768px) {
+  .gdpr-field label {
+    white-space: nowrap;
   }
 }
 

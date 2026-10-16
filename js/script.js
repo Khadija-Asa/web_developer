@@ -275,24 +275,26 @@ function marqueeAnimation() {
 
 function contactAnimation() {
   gsap.from(".contact_details li", {
-    y: 30,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.12,
-    ease: "power3.out",
-    scrollTrigger: { trigger: ".contact_details", start: "top 90%" }
-  });
-  const items = gsap.utils.toArray(".form_wrapper .field:not(.gdpr-field), #field-gdpr, #submitBtn");
-  gsap.from(items, {
     y: 40,
     opacity: 0,
-    duration: 1,
-    stagger: 0.1,
-    ease: "power3.out",
-    scrollTrigger: { trigger: ".form_wrapper", start: "top 80%" },
-    onStart: () => gsap.set(items, { transition: "none" }),
-    onComplete: () => gsap.set(items, { clearProps: "transition" })
+    duration: 1.6,
+    stagger: 0.25,
+    ease: "expo.out",
+    scrollTrigger: { trigger: ".contact_details", start: "top 90%" }
   });
+
+  const fields = gsap.utils.toArray(".form_wrapper .field:not(.gdpr-field), #field-gdpr");
+  const button = document.getElementById("submitBtn");
+  gsap.timeline({
+    scrollTrigger: { trigger: ".form_wrapper", start: "top 85%" },
+    onStart: () => gsap.set([...fields, button], { transition: "none" }),
+    onComplete: () => gsap.set([...fields, button], { clearProps: "transition,clipPath" })
+  })
+    .fromTo(fields,
+      { y: 60, opacity: 0, clipPath: "inset(0 0 100% 0)" },
+      { y: 0, opacity: 1, clipPath: "inset(0 0 0% 0)", duration: 1.6, stagger: 0.2, ease: "expo.out" }
+    )
+    .from(button, { scale: 0.8, opacity: 0, duration: 1.2, ease: "back.out(1.7)" }, "-=0.9");
 }
 
 function footerAnimation() {
