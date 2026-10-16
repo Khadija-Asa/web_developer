@@ -35,7 +35,7 @@ function starAnimation() {
 }
 
 function magneticButtons() {
-  document.querySelectorAll(".hero_button a, .footer_button a, #submitBtn").forEach(button => {
+  document.querySelectorAll(".hero_button a, #submitBtn").forEach(button => {
     button.classList.add("is_magnetic");
     button.addEventListener("mousemove", (e) => {
       const rect = button.getBoundingClientRect();
@@ -297,21 +297,33 @@ function contactAnimation() {
     .from(button, { scale: 0.8, opacity: 0, duration: 1.2, ease: "back.out(1.7)" }, "-=0.9");
 }
 
+function splitChars(element) {
+  const text = element.textContent.trim();
+  element.textContent = "";
+  return [...text].map(character => {
+    const span = document.createElement("span");
+    span.className = "char";
+    span.textContent = character === " " ? "\u00a0" : character;
+    element.append(span);
+    return span;
+  });
+}
+
 function footerAnimation() {
-  const words = splitWords(document.querySelector(".footer_heading"));
-  const buttons = gsap.utils.toArray(".footer_button a");
   gsap.timeline({ scrollTrigger: { trigger: ".footer", start: "top 75%" } })
-    .from(words, { yPercent: 120, rotation: 8, opacity: 0, duration: 1.3, stagger: 0.08, ease: "expo.out" })
-    .from(".footer_subtitle", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, 0.4)
-    .from(buttons, {
-      y: 30,
-      opacity: 0,
-      duration: 0.9,
-      stagger: 0.1,
-      ease: "power3.out",
-      onStart: () => gsap.set(buttons, { transition: "none" }),
-      onComplete: () => gsap.set(buttons, { clearProps: "transition" })
-    }, 0.6);
+    .from(splitWords(document.querySelector(".footer_heading")), { yPercent: 120, rotation: 6, opacity: 0, duration: 1.4, stagger: 0.08, ease: "expo.out" })
+    .from(".footer_subtitle", { y: 30, opacity: 0, duration: 1.2, ease: "power3.out" }, 0.35)
+    .from(".footer_mail", { y: 30, opacity: 0, duration: 1.2, ease: "power3.out" }, 0.5)
+    .from(".footer_column", { y: 40, opacity: 0, duration: 1.2, stagger: 0.15, ease: "power3.out" }, 0.5);
+
+  gsap.from(splitChars(document.querySelector(".footer_name")), {
+    yPercent: 100,
+    opacity: 0,
+    duration: 1.4,
+    stagger: 0.05,
+    ease: "expo.out",
+    scrollTrigger: { trigger: ".footer_name", start: "top 95%" }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -337,11 +349,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (finePointer) magneticButtons();
 });
 
-const localTime = document.getElementById("localTime");
+const localTimes = document.querySelectorAll(".local_time");
 const timeFormat = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" });
 
 function updateTime() {
-  localTime.textContent = timeFormat.format(new Date());
+  localTimes.forEach(element => {
+    element.textContent = timeFormat.format(new Date());
+  });
 }
 
 updateTime();
@@ -352,8 +366,14 @@ const heroScroll = document.querySelector(".hero_scroll");
 // Scroll to top
 const mybutton = document.getElementById("btn-back-to-top");
 
+const socialMedia = document.querySelector(".social_media");
+const footer = document.querySelector(".footer");
+
 function scrollFunction() {
+  const footerVisible = footer.getBoundingClientRect().top < window.innerHeight;
   mybutton.style.display = window.scrollY > window.innerHeight / 2 ? "block" : "none";
+  mybutton.classList.toggle("is_hidden", footerVisible);
+  socialMedia.classList.toggle("is_hidden", footerVisible);
   heroScroll.classList.toggle("is_hidden", window.scrollY > 20);
 }
 
@@ -361,8 +381,10 @@ window.addEventListener("scroll", scrollFunction, { passive: true });
 
 const scrollBehavior = reduceMotion ? "auto" : "smooth";
 
-mybutton.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: scrollBehavior });
+[mybutton, document.getElementById("footerBackToTop")].forEach(button => {
+  button.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: scrollBehavior });
+  });
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {

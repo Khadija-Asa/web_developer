@@ -129,7 +129,7 @@
         </ul> 
         <span aria-hidden="true" class="social_line"></span>
       </div>
-      <p class="hero_time">Based in France — <time id="localTime"></time></p>
+      <p class="hero_time">Based in France — <time class="local_time"></time></p>
       <div aria-hidden="true" class="hero_scroll">
         <span>scroll</span>
         <span class="hero_scroll_line"></span>
@@ -568,47 +568,56 @@
 </div>
 
 <footer class="footer">
-    <div class="footer_title">
 
-      <p class="footer_heading">
-        frontend 
-        <span class="highlight">&</span> 
-        creative <br>
-        developer
-      </p>
-
+  <div class="footer_top">
+    <div class="footer_cta">
+      <p class="footer_heading">frontend developer</p>
       <p class="footer_subtitle">
         since 2021. <br>
         let's innovate together.
       </p>
-
+      <a class="footer_mail" href="mailto:khadidja.aitsiali@gmail.com">
+        <span class="footer_mail_label">Let's talk <span aria-hidden="true">→</span></span>
+        khadidja.aitsiali@gmail.com
+      </a>
     </div>
 
-    <div class="footer_button">
-
-      <a href="https://www.linkedin.com/in/khadidja-ait-si-ali/" target="_blank" rel="noopener noreferrer">
-        Linkedin <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span>
-      </a>
-      <a href="https://github.com/Khadija-Asa" target="_blank" rel="noopener noreferrer">
-        Github <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span>
-      </a>
-      <span class="element_bg"></span>
-      <a href="mailto:khadidja.aitsiali@gmail.com">
-        Email <span aria-hidden="true">↗</span>
-      </a>
-
+    <div class="footer_columns">
+      <div class="footer_column">
+        <p class="footer_label">Socials</p>
+        <ul class="footer_button">
+          <li><a href="https://www.linkedin.com/in/khadidja-ait-si-ali/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a></li>
+          <li><a href="https://github.com/Khadija-Asa" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr_only"> (opens in a new tab)</span></a></li>
+          <li><a href="mailto:khadidja.aitsiali@gmail.com">Email <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer_column">
+        <p class="footer_label">Navigation</p>
+        <ul class="footer_links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button type="button" class="footer_back" id="footerBackToTop">Back to top <span aria-hidden="true">↑</span></button></li>
+        </ul>
+      </div>
+      <div class="footer_column">
+        <p class="footer_label">Info</p>
+        <ul class="footer_links">
+          <li>Based in France</li>
+          <li><time class="local_time"></time></li>
+          <li>Available for freelance</li>
+        </ul>
+      </div>
     </div>
-    
-    <div class="footer_bottom"> 
+  </div>
 
-      <p class="bottom_title">
-        <span>© All rights reserved</span>
-        <span><a href="notice.html">Legal Notice</a></span>
-        <span><button type="button" class="cookie_settings" id="cookieSettings">Cookies</button></span>
-        <span>Khadidja A. <span id="year">2026</span></span>
-      </p>
+  <p aria-hidden="true" class="footer_name">Khadidja A.</p>
 
-    </div>
+  <div class="footer_bottom">
+    <p class="bottom_title">
+      <span>© <span id="year">2026</span> Khadidja A. — All rights reserved</span>
+      <span><a href="notice.html">Legal Notice</a> · <button type="button" class="cookie_settings" id="cookieSettings">Cookies</button></span>
+    </p>
+  </div>
 
 </footer>
 

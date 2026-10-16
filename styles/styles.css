@@ -131,7 +131,6 @@
 }
 
 .hero_button a.is_magnetic,
-.footer_button a.is_magnetic,
 .btn.is_magnetic {
   transition: background-color .3s ease, border-color .3s ease, opacity .2s ease;
 }
@@ -1153,83 +1152,154 @@ textarea {
 /* footer */
 footer {
   position: relative;
-  text-align: center;
   text-transform: uppercase;
-  border-top: 1px solid var(--White);
+  border-top: 1px solid rgba(254, 252, 255, .25);
   font-family: 'Pergola';
   width: 100%;
   background-color: var(--Black);
   margin-top: clamp(8rem, 6rem + 10vw, 15rem);
   z-index: 0;
+  overflow: hidden;
 }
 
-.footer {
-  padding: 4rem 0 0 0;
+.footer_top {
+  display: grid;
+  gap: 4rem;
+  padding: clamp(4rem, 3rem + 4vw, 7rem) 1rem 0 1rem;
 }
 
-/* titles */
-.footer_title {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer_title .footer_heading {
-  font-size: clamp(2rem, 1.5897rem + 2.0513vw, 4rem);
-  margin-bottom: 0;
+.footer_heading {
   font-family: 'Bold';
   font-weight: bold;
+  font-size: clamp(2rem, 1.4rem + 3vw, 4.5rem);
+  line-height: 1.05;
 }
 
-.footer_title span {
-  text-decoration: none !important;
-}
-
-.footer_title .footer_subtitle {
-  font-size: 1.5rem;
+.footer_subtitle {
+  margin-top: 1.2rem;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
   font-weight: bold;
   font-style: italic;
-  margin-top: 2rem;
 }
 
-/* buttons */
-.footer_button {
+.footer_mail {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .4rem 1rem;
+  margin-top: 1.5rem;
+  font-size: clamp(0.85rem, 0.8rem + 0.3vw, 1.1rem);
+  text-transform: none;
+  background: linear-gradient(var(--Purple), var(--Purple)) 0 100% / 0% 1px no-repeat;
+  transition: background-size .5s ease, color .3s ease;
+}
+
+.footer_mail:hover {
+  color: var(--Purple);
+  background-size: 100% 1px;
+}
+
+.footer_mail_label {
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--Purple);
+}
+
+.footer_columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer_label {
+  margin-bottom: 1rem;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  color: var(--Gray);
+  opacity: .6;
+}
+
+.footer_columns ul {
   display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: .6rem;
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+  letter-spacing: .05em;
 }
 
-.footer_button a {
+.footer_columns a,
+.footer_back {
   color: var(--White);
-  border: 1px solid var(--Gray);
-  border-radius: 5px;
+  transition: color .3s ease;
+}
+
+.footer_columns a:hover,
+.footer_back:hover {
+  color: var(--Purple);
+}
+
+.footer_back {
+  padding: 0;
+  font: inherit;
+  background: none;
+  border: none;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.footer_columns span[aria-hidden="true"] {
+  line-height: 0;
+}
+
+.footer_name {
+  margin-top: clamp(4rem, 3rem + 4vw, 7rem);
+  font-family: 'Bold';
+  font-weight: bold;
+  font-size: 10vw;
+  line-height: .8;
+  color: rgba(209, 209, 209, .14);
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: -.01em;
+}
+
+.footer_name .char {
   display: inline-block;
-  transition: all .5s ease;
-  width: 100px;
-  text-transform: capitalize;
-  padding: 1.5px 0;
 }
 
-.footer_button a:hover {
-  transform: translate(0, -2px);
-}
-
-/* bottom */
 .footer_bottom {
-  padding-top: 5rem;
+  border-top: 1px solid rgba(254, 252, 255, .25);
+  margin-top: 1.5rem;
+  padding: 1.2rem 1rem 1.5rem 1rem;
 }
 
 .footer_bottom p {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  gap: .6rem 2rem;
 }
 
 .bottom_title span {
-  font-size: clamp(0.5rem, 0.46rem + 0.2vw, 0.7rem);
+  font-size: clamp(0.6rem, 0.56rem + 0.2vw, 0.75rem);
+  letter-spacing: .1em;
+}
+
+@media screen and (width >= 1024px) {
+  .footer_top {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: end;
+    padding-right: 2rem;
+    padding-left: 4rem;
+  }
+}
+
+@media screen and (width < 600px) {
+  .footer_columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .cookie_settings {
